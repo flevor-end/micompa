@@ -1,3 +1,49 @@
+.header {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.hero {
+  text-align: center;
+  padding-bottom: 5em;
+}
+.hero .copy {
+  margin-bottom: 2.5em;
+}
+.hero__img {
+  height: 300px;
+  margin: 0 calc(-1 * var(--wrapperSpace));
+  background: url("../images/image-mockups.png") center bottom no-repeat, url("../images/bg-intro-mobile.svg") center no-repeat;
+  background-size: 345px, cover;
+  margin-bottom: 1.2em;
+}
+
+.menu {
+  width: 40px;
+  background: url("../images/icon-hamburger.svg") no-repeat center;
+}
+
+.section2 {
+  text-align: center;
+  background: var(--lightGrayishBlue);
+  padding-top: 5em;
+}
+.section2 .copy {
+  margin-bottom: 4em;
+}
+.section2__item .copy {
+  margin-bottom: 2em;
+  font-size: 1em;
+}
+.section2__item img {
+  margin-bottom: 1.5em;
+}
+
+.articles {
+  border: 1px solid red;
+}
+
 :root {
   --darkBlue: hsl(233, 26%, 24%);
   --limeRed: hsl(356, 86%, 55%);
@@ -7,6 +53,7 @@
   --lightGray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
   font-size: 16px;
+  --wrapperSpace: 1.5em;
 }
 
 body {
@@ -20,22 +67,24 @@ body {
   font-size: 0.9em;
 }
 
-.hero {
-  text-align: center;
-}
-
 .wrapper {
-  padding: 0 1.5em;
+  padding: 0 var(--wrapperSpace);
 }
 
-.title__h1 {
+.title__h1, .title__h2 {
   font-size: 2.2em;
   color: var(--darkBlue);
   font-weight: 300;
   line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.title__h2 {
+  font-size: 1.5em;
 }
 
 .button {
+  border: none;
   padding: 0.9em 2.2em;
   font-size: 1em;
   border-radius: 1.5em;
