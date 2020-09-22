@@ -1,0 +1,46 @@
+:root {
+  --darkBlue: hsl(233, 26%, 24%);
+  --limeRed: hsl(356, 86%, 55%);
+  --brightCyan: hsl(192, 70%, 51%);
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --lightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 16px;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  color: var(--grayishBlue);
+}
+
+.copy {
+  line-height: 1.7;
+  font-size: 0.9em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 0 1.5em;
+}
+
+.title__h1 {
+  font-size: 2.2em;
+  color: var(--darkBlue);
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.button {
+  padding: 0.9em 2.2em;
+  font-size: 1em;
+  border-radius: 1.5em;
+  color: var(--white);
+  background-image: linear-gradient(to right, var(--limeRed) 0%, var(--brightCyan) 100%);
+}
+
+/*# sourceMappingURL=estilos.css.map */
