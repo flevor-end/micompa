@@ -15,7 +15,14 @@
     margin-bottom: 2em;
   }
   &__social {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 25px);
+    grid-column-gap: 1em;
     justify-content: center;
+    margin: 2.5em 0;
+  }
+  &__copyright {
+    color: var(--grayishBlue);
+    margin-top: 2.5em;
   }
 }

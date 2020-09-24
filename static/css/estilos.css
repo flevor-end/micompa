@@ -27,7 +27,7 @@
 .section2 {
   text-align: center;
   background: var(--lightGrayishBlue);
-  padding-top: 5em;
+  padding: 5em 0;
 }
 .section2 .copy {
   margin-bottom: 4em;
@@ -41,11 +41,12 @@
 }
 
 .articles {
-  padding-top: 5em 0;
+  padding: 5em 0;
   background: var(--lightGray);
 }
 .articles .title__h1 {
   text-align: center;
+  margin-bottom: 1em;
 }
 .articles__grid {
   display: grid;
@@ -91,8 +92,15 @@
   margin-bottom: 2em;
 }
 .footer__social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 25px);
+  grid-column-gap: 1em;
   justify-content: center;
+  margin: 2.5em 0;
+}
+.footer__copyright {
+  color: var(--grayishBlue);
+  margin-top: 2.5em;
 }
 
 :root {
