@@ -41,12 +41,63 @@
 }
 
 .articles {
-  border: 1px solid red;
+  padding-top: 5em 0;
+  background: var(--lightGray);
+}
+.articles .title__h1 {
+  text-align: center;
+}
+.articles__grid {
+  display: grid;
+  grid-row-gap: 2em;
+}
+.articles__item {
+  border-radius: 0.5em;
+  overflow: hidden;
+  background: var(--white);
+}
+.articles__item-content {
+  padding: 1.8em;
+}
+.articles__item .copy {
+  color: var(--grayBlue);
+}
+.articles__item small {
+  color: var(--grayBlue);
+  margin-bottom: 1em;
+  display: block;
+}
+.articles__item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  background: var(--darkBlue);
+  color: var(--white);
+  padding: 2em 0;
+  text-align: center;
+}
+.footer img {
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.footer__link {
+  display: block;
+  color: var(--lightGray);
+  text-decoration: none;
+  margin-bottom: 2em;
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
 }
 
 :root {
   --darkBlue: hsl(233, 26%, 24%);
-  --limeRed: hsl(356, 86%, 55%);
+  --limeRed: hsl(4, 71%, 51%);
   --brightCyan: hsl(192, 70%, 51%);
   --grayishBlue: hsl(233, 8%, 62%);
   --lightGrayishBlue: hsl(220, 16%, 96%);
@@ -71,7 +122,7 @@ body {
   padding: 0 var(--wrapperSpace);
 }
 
-.title__h1, .title__h2 {
+.title__h1 {
   font-size: 2.2em;
   color: var(--darkBlue);
   font-weight: 300;
@@ -80,7 +131,22 @@ body {
   margin-bottom: 0.5em;
 }
 .title__h2 {
+  font-size: 2.2em;
+  color: var(--darkBlue);
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.5em;
   font-size: 1.5em;
+}
+.title__h3 {
+  font-size: 2.2em;
+  color: var(--darkBlue);
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: 1em;
 }
 
 .button {
@@ -90,6 +156,35 @@ body {
   border-radius: 1.5em;
   color: var(--white);
   background-image: linear-gradient(to right, var(--limeRed) 0%, var(--brightCyan) 100%);
+}
+
+.icon__facebook {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-facebook.svg");
+}
+.icon__youtube {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-youtube.svg");
+}
+.icon__instagram {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-instagram.svg");
+}
+.icon__twitter {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon-twitter.svg");
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,21 @@
+.footer {
+  background: var(--darkBlue);
+  color: var(--white);
+  padding: 2em 0;
+  text-align: center;
+  img {
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+  &__link {
+    display: block;
+    color: var(--lightGray);
+    text-decoration: none;
+    margin-bottom: 2em;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+  }
+}
