@@ -13,6 +13,9 @@
     background-size: 345px, cover;
     margin-bottom: 1.2em;
   }
+  &__imageSrc {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     text-align: left;
     background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
@@ -26,20 +29,20 @@
       align-items: center;
       min-height: 550px;
       grid-template-areas: "description img";
-      grid-template-columns: 370px 1fr;
+      grid-template-columns: 330px 1fr;
     }
     &__description {
-      border: 1px solid green;
+      // border: 1px solid green;
     }
     &__img {
       grid-area: img;
       min-height: inherit;
       // background: none;
       position: absolute;
-      width: 500px;
+      width: 400px;
       left: 0;
       top: 0;
-      height: 786px;
+      height: 768px;
       background: url("../images/image-mockups.png") left bottom no-repeat;
       background-size: cover;
     }
@@ -48,9 +51,15 @@
     &__content {
       // position: static;
     }
+    &__imageSrc {
+      display: block;
+      position: relative;
+      top: -150px;
+      z-index: 1;
+    }
     &__img {
       // background: url("../images/image-mockups.png") right -100px bottom no-repeat;
-      // background-size: 100%;
+      background: none;
       // width: 700px;
       left: 150px;
       right: 0;

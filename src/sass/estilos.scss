@@ -26,7 +26,7 @@ body {
   font-family: "Public Sans", sans-serif;
   margin: 0;
   color: var(--grayishBlue);
-  // overflow: hidden;
+  overflow-x: hidden;
 }
 
 .copy {
@@ -40,8 +40,10 @@ body {
 
 .wrapper {
   padding: 0 var(--wrapperSpace);
-  max-width: 1115px;
+  max-width: calc(1115px + 1.5em);
   margin: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @mixin title {
