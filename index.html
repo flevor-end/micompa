@@ -12,19 +12,50 @@
   </head>
   <body>
     <header class="header">
-      <img src="./static/images/LogoMiCompa.png" alt="" />
-      <nav class="menu"></nav>
+      <div class="wrapper">
+        <div class="header__content">
+          <img
+            class="header__logo"
+            src="./static/images/LogoMiCompa.png"
+            alt=""
+          />
+          <input type="checkbox" id="menu" class="menu__checkbox" />
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="">Quienes somos?</a>
+            </li>
+            <li class="menu__item">
+              <a href="">Como funciona?</a>
+            </li>
+            <li class="menu__item">
+              <a href="">Beneficios</a>
+            </li>
+            <li class="menu__item">
+              <a href="">Referidos</a>
+            </li>
+          </ul>
+          <button class="button">request invite</button>
+          <label for="menu" class="menu__button"></label>
+        </div>
+      </div>
     </header>
     <section class="hero">
       <div class="wrapper">
-        <div class="hero__img"></div>
-        <h1 class="title__h1">Mi Compa te presta 100% Online</h1>
-        <p class="copy">
-          Take your finalcial life online. Your Compa account will be a
-          one-stop-shop for spending. saving, budgeting, investing, and much
-          more.
-        </p>
-        <button class="button">Solicitar prestamo</button>
+        <div class="hero__content">
+          <div class="hero__img"></div>
+          <div class="hero__description">
+            <h1 class="title__h1">Mi Compa te presta 100% Online</h1>
+            <p class="copy">
+              Take your finalcial life online. Your Compa account will be a
+              one-stop-shop for spending. saving, budgeting, investing, and much
+              more.
+            </p>
+            <button class="button">Solicitar prestamo</button>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section2">
@@ -142,20 +173,26 @@
     </section>
     <footer class="footer">
       <div class="wrapper">
-        <img src="./static/images/LogoMiCompa.png" alt="" />
+        <img
+          class="footer__logo"
+          src="./static/images/LogoMiCompa.png"
+          alt=""
+        />
         <p class="footer__social">
           <a href="" class="icon__youtube"></a>
           <a href="" class="icon__facebook"></a>
           <a href="" class="icon__twitter"></a>
           <a href="" class="icon__instagram"></a>
         </p>
-        <a href="#" class="footer__link"> About Us </a>
-        <a href="#" class="footer__link"> Contact </a>
-        <a href="#" class="footer__link"> Blog </a>
-        <a href="#" class="footer__link"> Careers </a>
-        <a href="#" class="footer__link"> Support </a>
-        <a href="#" class="footer__link"> Privacy Policy </a>
-        <div>
+        <div class="footer__links">
+          <a href="#" class="footer__link"> About Us </a>
+          <a href="#" class="footer__link"> Contact </a>
+          <a href="#" class="footer__link"> Blog </a>
+          <a href="#" class="footer__link"> Careers </a>
+          <a href="#" class="footer__link"> Support </a>
+          <a href="#" class="footer__link"> Privacy Policy </a>
+        </div>
+        <div class="footer__button">
           <button class="button">Request Invite</button>
         </div>
         <p class="footer__copyright">© Mi Compa. All Rights Reserved</p>

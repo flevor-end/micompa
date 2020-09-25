@@ -1,7 +1,7 @@
 .hero {
-  // border: 2px solid red;
   text-align: center;
   padding-bottom: 5em;
+  background: var(--lightGray);
   .copy {
     margin-bottom: 2.5em;
   }
@@ -12,5 +12,49 @@
       url("../images/bg-intro-mobile.svg") center no-repeat;
     background-size: 345px, cover;
     margin-bottom: 1.2em;
+  }
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    box-sizing: border-box;
+    &__content {
+      position: relative;
+      // border: 1px solid red;
+      display: grid;
+      align-items: center;
+      min-height: 550px;
+      grid-template-areas: "description img";
+      grid-template-columns: 370px 1fr;
+    }
+    &__description {
+      border: 1px solid green;
+    }
+    &__img {
+      grid-area: img;
+      min-height: inherit;
+      // background: none;
+      position: absolute;
+      width: 500px;
+      left: 0;
+      top: 0;
+      height: 786px;
+      background: url("../images/image-mockups.png") left bottom no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &__content {
+      // position: static;
+    }
+    &__img {
+      // background: url("../images/image-mockups.png") right -100px bottom no-repeat;
+      // background-size: 100%;
+      // width: 700px;
+      left: 150px;
+      right: 0;
+      top: 0;
+    }
   }
 }
