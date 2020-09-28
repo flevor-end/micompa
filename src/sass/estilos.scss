@@ -2,13 +2,14 @@
 @import "./hero.scss";
 @import "./menu.scss";
 @import "./section2.scss";
+@import "cards.scss";
 @import "./articles.scss";
 @import "./footer.scss";
 
 :root {
   // ### Primary
 
-  --darkBlue: hsl(233, 26%, 24%);
+  --darkBlue: hsl(0, 0%, 16%);
   --limeRed: hsl(4, 71%, 51%);
   --brightCyan: hsl(192, 70%, 51%);
 
@@ -61,7 +62,7 @@ body {
   }
   &__h2 {
     @include title;
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   &__h3 {
     @include title;
