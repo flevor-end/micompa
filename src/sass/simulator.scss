@@ -1,0 +1,57 @@
+.input-group,
+.input-group-addon {
+  background-color: white;
+  border-style: none;
+}
+
+/* https://stackoverflow.com/questions/8912660/hiding-the-slider-input-box-in-jquery */
+.simulator {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ui-slider-input {
+  display: none !important;
+}
+
+.marginator {
+  margin: 5% 5% 5% 5%;
+}
+
+.padme {
+  padding: 2% 0% 2% 0%;
+}
+
+.col-xs-1 {
+  width: 2.333333%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row {
+  margin-right: -23px;
+  margin-left: -38px;
+}
+
+a.ui-slider-handle.ui-btn.ui-shadow {
+  border-radius: 50%;
+}
+
+.ui-checkbox,
+.ui-radio {
+  margin: 0.5em 0;
+  position: relative;
+  display: none;
+}
+
+.ui-page-theme-a .ui-btn {
+  // background-color: #f6f6f6;
+  border-color: none;
+  color: var(--white);
+  text-shadow: none;
+  width: 134px;
+}

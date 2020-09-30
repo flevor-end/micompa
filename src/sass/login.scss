@@ -1,0 +1,196 @@
+.W50 {
+  width: calc(50% - 12.5px);
+}
+.W50.paddingWidth {
+  width: calc(50% - 32.5px);
+}
+
+.resultadoMenu {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 333px);
+  height: 100%;
+}
+
+.contentResultados {
+  width: calc(100% - 205.5px);
+  // display: inline-block;
+}
+.resultadoMenu1,
+.resultadoMenu2,
+.resultadoMenu3,
+.resultadoMenu4,
+.resultadoMenu5,
+.resultadoMenu6,
+.resultadoMenu7,
+.resultadoMenuModa {
+  height: calc(0vh - 0px);
+  position: relative;
+  display: block;
+  border-width: 0;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.resultadoMenu1.activo,
+.resultadoMenu2.activo,
+.resultadoMenu3.activo,
+.resultadoMenu4.activo,
+.resultadoMenu5.activo,
+.resultadoMenu6.activo,
+.resultadoMenu7.activo,
+.resultadoMenuModa.activo {
+  height: calc(100vh - 40px);
+}
+
+.resultadoMenuRm {
+  height: calc(0vh - 0px);
+  position: relative;
+  display: block;
+  border-width: 0;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.resultadoMenuRm.activo {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.contCampo {
+  display: block;
+  position: relative;
+  margin: 5% auto;
+  max-width: 460px;
+  // height: auto;
+  background-color: #efefef;
+  padding-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.form-top {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 0 1rem;
+  border-top: solid 0.4rem var(--limeRed);
+  border-radius: 8px;
+}
+
+.form-top h2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #313639;
+}
+
+h2.form-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h2 span {
+  color: var(--limeRed);
+}
+
+h2.form-title2 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-reg {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-form {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.input,
+.btn-submit,
+.btn-ingresar,
+.formclas input,
+.formclas textarea {
+  background-color: #f7f5f5;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-bottom: solid #c8c8c8 0.2rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.input:focus {
+  border-bottom: solid var(--limeRed) 0.2rem;
+}
+
+.formclas input.btn-enviar {
+  width: 40%;
+  border-bottom: none;
+  background-color: #31e56f;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-ingresar {
+  background-color: var(--limeRed);
+  border-radius: 5px;
+  border-bottom: solid var(--limeRed) 0.2rem;
+}
+
+.btn-submit:hover {
+  background-color: #24e466;
+}
+
+input.btn-ingresar:hover {
+  background: var(--limeRed);
+}
+
+.hook {
+  position: absolute;
+  width: 100%;
+  display: block;
+  z-index: 90;
+}
+.menuBox {
+  display: none;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: rgba(250, 250, 250, 0.95);
+}
+.menuBox.menuActivo {
+  display: block;
+  position: fixed;
+  height: 100vh;
+}
+span.iconX {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #232527;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+  right: 30px;
+}
+span.iconX:before,
+span.iconX:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: #f5f5f5;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+span.iconX:after {
+  transform: rotate(-45deg);
+}
