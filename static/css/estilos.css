@@ -381,6 +381,9 @@
   .footer__button {
     grid-area: button;
     text-align: right;
+    position: relative;
+    align-content: end;
+    direction: rtl;
   }
   .footer__copyright {
     grid-area: copyright;
@@ -465,14 +468,7 @@ a.ui-slider-handle.ui-btn.ui-shadow {
   width: calc(100% - 205.5px);
 }
 
-.resultadoMenu1,
-.resultadoMenu2,
-.resultadoMenu3,
-.resultadoMenu4,
-.resultadoMenu5,
-.resultadoMenu6,
-.resultadoMenu7,
-.resultadoMenuModa {
+.resultadoMenu1 {
   height: calc(0vh - 0px);
   position: relative;
   display: block;
@@ -481,18 +477,11 @@ a.ui-slider-handle.ui-btn.ui-shadow {
   overflow: hidden;
 }
 
-.resultadoMenu1.activo,
-.resultadoMenu2.activo,
-.resultadoMenu3.activo,
-.resultadoMenu4.activo,
-.resultadoMenu5.activo,
-.resultadoMenu6.activo,
-.resultadoMenu7.activo,
-.resultadoMenuModa.activo {
+.resultadoMenu1.activo {
   height: calc(100vh - 40px);
 }
 
-.resultadoMenuRm {
+.resulReg {
   height: calc(0vh - 0px);
   position: relative;
   display: block;
@@ -501,9 +490,21 @@ a.ui-slider-handle.ui-btn.ui-shadow {
   overflow: hidden;
 }
 
-.resultadoMenuRm.activo {
+.resulReg.activo {
   height: calc(100vh - 40px);
-  overflow-y: auto;
+}
+
+.resulOlvidoContrasena {
+  height: calc(0vh - 0px);
+  position: relative;
+  display: block;
+  border-width: 0;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.resulOlvidoContrasena.activo {
+  height: calc(100vh - 40px);
 }
 
 .contCampo {
@@ -546,7 +547,7 @@ h2.form-title2 {
 }
 
 .form-reg {
-  padding: 0 5rem;
+  padding: 0 2.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -558,24 +559,28 @@ h2.form-title2 {
   margin-top: 1rem;
 }
 
-.input,
-.btn-submit,
+.contLogin,
 .btn-ingresar,
-.formclas input,
-.formclas textarea {
+.formclas,
+.formclas {
   background-color: #f7f5f5;
   padding: 1rem;
   margin: 1rem 0;
   border-bottom: solid #c8c8c8 0.2rem;
   transition: all 0.5s;
   border-radius: 5px;
+  text-decoration: none;
 }
 
-.input:focus {
+input {
+  border: 0;
+}
+
+.contLogin:focus {
   border-bottom: solid var(--limeRed) 0.2rem;
 }
 
-.formclas input.btn-enviar {
+.formclas .btn-enviar {
   width: 40%;
   border-bottom: none;
   background-color: #31e56f;
@@ -587,13 +592,15 @@ h2.form-title2 {
   background-color: var(--limeRed);
   border-radius: 5px;
   border-bottom: solid var(--limeRed) 0.2rem;
+  color: var(--white);
+  width: 162px;
 }
 
 .btn-submit:hover {
   background-color: #24e466;
 }
 
-input.btn-ingresar:hover {
+.btn-ingresar:hover {
   background: var(--limeRed);
 }
 
@@ -617,6 +624,41 @@ input.btn-ingresar:hover {
   display: block;
   position: fixed;
   height: 100vh;
+}
+
+.registro {
+  display: none;
+  position: relative;
+  max-width: 420px;
+  background-color: #efefef;
+  padding-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.registro.registroActivo {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  top: 156px;
+  right: 454px;
+}
+
+.olvidoContrasena {
+  display: none;
+  position: relative;
+  max-width: 420px;
+  background-color: #efefef;
+  padding-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.olvidoContrasena.olvidoContrasenaActivo {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  top: 156px;
+  right: 478px;
+  width: 395px;
 }
 
 span.iconX {
@@ -646,6 +688,16 @@ span.iconX:after {
 
 span.iconX:after {
   transform: rotate(-45deg);
+}
+
+.foot-Lnk {
+  text-align: center;
+  color: #000;
+}
+
+a.ui-link {
+  color: #000;
+  font-weight: 300;
 }
 
 :root {

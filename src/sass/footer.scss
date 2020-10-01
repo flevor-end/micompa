@@ -3,6 +3,7 @@
   color: var(--white);
   padding: 2em 0;
   text-align: center;
+
   &__logo {
     display: block;
     margin: auto;
@@ -50,6 +51,9 @@
     &__button {
       grid-area: button;
       text-align: right;
+      position: relative;
+      align-content: end;
+      direction: rtl;
     }
     &__copyright {
       grid-area: copyright;

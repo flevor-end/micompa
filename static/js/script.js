@@ -21,9 +21,46 @@ $(".detonadorMenu").click(function () {
     $(".resultadoMenu1").addClass("activo");
   }
 });
+$(".detonadorRegistro").click(function () {
+  if ($(this).hasClass("activo")) {
+    $(this).removeClass("activo");
+    $(".registro").removeClass("registroActivo");
+    $("#header").removeClass("registroActivo");
+    $("#body").removeClass("registroActivo");
+    $(".box").removeClass("activo");
+    $(".resulReg").removeClass("activo");
+  } else {
+    $(this).addClass("activo");
+    $(".registro").addClass("registroActivo");
+    $("#header").addClass("registroActivo");
+    $("#body").addClass("registroActivo");
+    $(".resulReg").addClass("activo");
+  }
+});
+$(".detonadorRecuperar").click(function () {
+  if ($(this).hasClass("activo")) {
+    $(this).removeClass("activo");
+    $(".olvidoContrasena").removeClass("olvidoContrasenaActivo");
+    $("#header").removeClass("olvidoContrasenaActivo");
+    $("#body").removeClass("olvidoContrasenaActivo");
+    $(".box").removeClass("activo");
+    $(".resulOlvidoContrasena").removeClass("activo");
+  } else {
+    $(this).addClass("activo");
+    $(".olvidoContrasena").addClass("olvidoContrasenaActivo");
+    $("#header").addClass("olvidoContrasenaActivo");
+    $("#body").addClass("olvidoContrasenaActivo");
+    $(".resulOlvidoContrasena").addClass("activo");
+  }
+});
+
 $(".cerrarMenu").click(function () {
   $(".detonadorMenu").removeClass("activo");
   $(".menuBox").removeClass("menuActivo");
+  $(".detonadorRegistro").removeClass("activo");
+  $(".registro").removeClass("registroActivo");
+  $(".detonadorRecuperar").removeClass("activo");
+  $(".olvidoContrasena").removeClass("olvidoContrasenaActivo");
   $("#header").removeClass("menuActivo");
   $(".item").removeClass("activo");
   $(".box").removeClass("activo");
