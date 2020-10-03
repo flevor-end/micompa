@@ -38,7 +38,7 @@
   overflow: hidden;
 }
 .resulReg.activo {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 2px);
 }
 
 .resulOlvidoContrasena {
@@ -51,24 +51,28 @@
 }
 
 .resulOlvidoContrasena.activo {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 15px);
 }
 
 .contCampo {
   display: block;
   position: relative;
   margin: 5% auto;
-  max-width: 460px;
+  max-width: 600px;
   // height: auto;
   background-color: #efefef;
   padding-bottom: 1rem;
   border-radius: 8px;
 }
 
+// .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+//   width: 245px;
+// }
+
 .form-top {
   width: 100%;
   text-align: center;
-  padding: 4rem 0 1rem;
+  padding: 1rem 0 1rem;
   border-top: solid 0.4rem var(--limeRed);
   border-radius: 8px;
 }
@@ -86,6 +90,7 @@ h2.form-title {
 
 h2 span {
   color: var(--limeRed);
+  cursor: pointer;
 }
 
 h2.form-title2 {
@@ -94,11 +99,19 @@ h2.form-title2 {
   margin-bottom: 3rem;
 }
 
-.form-reg {
+.form-reg,
+.form-registro {
   padding: 0 2.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-content: center;
+  position: relative;
+  align-items: left;
+}
+
+.form-reg {
+  align-items: center;
 }
 
 .btn-form {
@@ -175,19 +188,15 @@ input {
 .registro {
   display: none;
   position: relative;
-  // margin: 5% auto;
-  max-width: 420px;
-  // height: auto;
-  background-color: #efefef;
-  padding-bottom: 1rem;
-  border-radius: 8px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: rgba(250, 250, 250, 0.95);
 }
 .registro.registroActivo {
   display: block;
   position: fixed;
   height: 100vh;
-  top: 156px;
-  right: 454px;
 }
 
 .olvidoContrasena {
@@ -237,12 +246,78 @@ span.iconX:after {
   transform: rotate(-45deg);
 }
 
-.foot-Lnk {
-  text-align: center;
-  color: #000;
+.custom-select {
+  width: 100%;
+  display: flex;
+  position: relative;
 }
 
-a.ui-link {
-  color: #000;
+.selectCC {
+  display: flex;
+  position: relative;
+}
+
+.selector {
+  margin: 0 0.5em;
+  width: 46%;
+}
+label {
+  font-weight: 700;
+}
+
+.tipoDoc {
+  vertical-align: bottom;
+  position: relative;
+  margin-top: 2em;
+  margin-top: 1.6em;
+}
+
+a.Terminos.ui-link {
+  color: var(--limeRed);
+  left: 39px;
+  width: calc(90% - 34px);
+  position: relative;
+}
+
+a.foot-Lnk.ui-link {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  display: block;
+  color: black;
   font-weight: 300;
+}
+
+.ui-input-text input,
+.ui-input-search input {
+  margin: 0;
+  min-height: 2.8em;
+  text-align: left;
+  border: 0;
+  background: var(--lightGrayishBlue);
+  -webkit-appearance: none;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .ui-btn {
+    font-size: 16px;
+    margin: 0.5em 0;
+    padding: 0.6em 1em;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }

@@ -37,29 +37,32 @@
               </div>
               <div class="box loginMC">
                 <form class="form-reg" action="">
-                  <label>Usuario</label>
-                  <input
-                    class="contLogin"
-                    type="text"
-                    placeholder="Correo Electronico"
-                    required
-                    autofocus
-                  />
-                  <label>Contraseña</label>
-                  <input
-                    class="contLogin"
-                    type="contraseña"
-                    placeholder="Contraseña"
-                    required
-                    autofocus
-                  />
+                  <div class="">
+                    <label>Usuario</label>
+                    <input
+                      class="contLogin"
+                      type="text"
+                      placeholder="Tu número de cédula"
+                      required
+                      autofocus
+                    />
+                  </div>
+                  <div>
+                    <label>Contraseña</label>
+                    <input
+                      class="contLogin"
+                      type="password"
+                      placeholder="Contraseña"
+                      required
+                      autofocus
+                    />
+                  </div>
                 </form>
                 <div class="btn-form">
                   <input class="btn-ingresar" type="submit" value="INGRESAR" />
                 </div>
-                <div class="hr"></div>
-                <div class="detonadorRecuperar foot-Lnk">
-                  <a href="#forgot">Recuperar Contraseña?</a>
+                <div class="detonadorRecuperar">
+                  <a href="#forgot" class="foot-Lnk">Recuperar Contraseña?</a>
                 </div>
               </div>
               <div class="detonadorRegistro">
@@ -67,93 +70,14 @@
                   Estas registrado? <span>Registrarse</span>
                 </h2>
               </div>
-              <div class="registro">
-                <div class="resulReg">
-                  <form class="form-reg" action="">
-                    <div style="display: inline-flex">
-                      <div style="display: block">
-                        <label>Nombre Completo</label>
-                        <input
-                          class="contLogin"
-                          type="text"
-                          placeholder="Nombre y Apellido"
-                          required
-                          autofocus
-                        />
-                      </div>
-                      <div style="display: block">
-                        <label>Documento</label>
-                        <input
-                          class="contLogin"
-                          type="number"
-                          placeholder="Numero de documento"
-                          required
-                          autofocus
-                        />
-                      </div>
-                    </div>
-                    <div style="display: inline-flex">
-                      <div style="display: block">
-                        <label>Celular</label>
-                        <input
-                          class="contLogin"
-                          type="tel"
-                          placeholder="Numero Celular"
-                          required
-                          autofocus
-                        />
-                      </div>
-                      <div style="display: block">
-                        <label>Correo Electronico</label>
-                        <input
-                          class="contLogin"
-                          type="email"
-                          placeholder="Numero de documento"
-                          required
-                          autofocus
-                        />
-                      </div>
-                    </div>
-                    <div style="display: inline-flex">
-                      <div style="display: block">
-                        <label>Contraseña</label>
-                        <input
-                          class="input"
-                          type="contraseña"
-                          placeholder="Contraseña"
-                          required
-                          autofocus
-                        />
-                      </div>
-                      <div style="display: block">
-                        <label>Confirmar Contraseña</label>
-                        <input
-                          class="contLogin"
-                          type="password"
-                          placeholder="Contraseña"
-                          required
-                          autofocus
-                        />
-                      </div>
-                    </div>
-                  </form>
-                  <div class="btn-form">
-                    <input
-                      class="btn-ingresar"
-                      type="submit"
-                      value="Registrarme"
-                    />
-                  </div>
-                </div>
-              </div>
               <div class="olvidoContrasena">
                 <div class="resulOlvidoContrasena">
                   <form class="form-reg" action="">
-                    <label>Correo Electronico</label>
+                    <label>Usuario</label>
                     <input
                       class="contLogin"
                       type="email"
-                      placeholder="Correo Electronico"
+                      placeholder="Usuario"
                       required
                       autofocus
                     />
@@ -166,8 +90,103 @@
                     />
                   </div>
                 </div>
-
-                <div class="hr"></div>
+              </div>
+            </div>
+          </div>
+          <span class="iconX cerrarMenu"></span>
+        </div>
+        <div class="registro">
+          <div class="box resulReg">
+            <div class="contCampo w50">
+              <div class="form-top">
+                <h2 class="form-title">Registrarse<span></span></h2>
+              </div>
+              <form class="form-registro" action="">
+                <div class="selector">
+                  <label>Nombre</label>
+                  <input
+                    class="contLogin"
+                    type="text"
+                    placeholder="Tu Primer Nombre"
+                    required
+                    autofocus
+                  />
+                </div>
+                <div class="custom-select">
+                  <div class="selector">
+                    <label>Tipo de Documento</label>
+                    <select type="section input">
+                      <option value="0">Cedula ciudadania</option>
+                    </select>
+                  </div>
+                  <div class="selector tipoDoc">
+                    <div>
+                      <input
+                        class="contLogin"
+                        type="text"
+                        placeholder="Tu número de Cédula"
+                        required
+                        autofocus
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-select">
+                  <div class="selector">
+                    <label>Celular</label>
+                    <input
+                      class="contLogin"
+                      type="tel"
+                      placeholder="Tu Número celular"
+                      required
+                      autofocus
+                    />
+                  </div>
+                  <div class="selector">
+                    <label>Correo Electronico</label>
+                    <input
+                      class="contLogin"
+                      type="email"
+                      placeholder="Tu correo electrónico"
+                      required
+                      autofocus
+                    />
+                  </div>
+                </div>
+                <div class="custom-select">
+                  <div class="selector">
+                    <label>Contraseña</label>
+                    <div>
+                      <input
+                        class="contLogin"
+                        type="password"
+                        placeholder="Crea tu contraseña"
+                        required
+                        autofocus
+                      />
+                    </div>
+                  </div>
+                  <div class="selector">
+                    <label>Confirmar Contraseña</label>
+                    <input
+                      class="contLogin"
+                      type="password"
+                      placeholder="confirme Contraseña"
+                      required
+                      autofocus
+                    />
+                  </div>
+                </div>
+                <input type="checkbox" name="TERMINOS Y CONDICIONES" id="" />
+                <a class="Terminos">Terminos y condiciones</a>
+              </form>
+              <div class="btn-form">
+                <input class="btn-ingresar" type="submit" value="Registrarme" />
+              </div>
+              <div class="detonadorMenu">
+                <h2 class="form-title2">
+                  Ya Estas registrado? <span>Iniciar sesión</span>
+                </h2>
               </div>
             </div>
           </div>
@@ -202,7 +221,20 @@
             </li>
           </ul>
           <div class="detonadorMenu">
-            <button class="button">Registrarse</button>
+            <button
+              class="btn-default warning"
+              style="background: var(--limeRed); color: white"
+            >
+              Iniciar Sesión
+            </button>
+          </div>
+          <div class="detonadorRegistro">
+            <button
+              class="btn-default"
+              style="background: var(--brightCyan); color: white"
+            >
+              Registrarse
+            </button>
           </div>
           <label for="menu" class="menu__button"></label>
         </div>
@@ -217,10 +249,14 @@
             <div class="container-fluid marginator">
               <div class="row">
                 <!-- How much cash -->
-                <div class="col-md-9 col-xs-9 title__h2">
+                <div class="col-md-9 col-xs-9 title__h2"></div>
+                <!-- Cash field -->
+                <div
+                  class="col-md-5 col-xs-6"
+                  style="font-size: 24px; text-align: left"
+                >
                   Que monto necesitas?
                 </div>
-                <!-- Cash field -->
                 <div class="col-md-3 col-xs-3">
                   <input
                     type="text"
@@ -228,7 +264,7 @@
                     class="form-control amount"
                     data-bind="value:currentAmount"
                     id="currentAmountVal"
-                    style="width: 30px"
+                    style="width: 30px; background: rgb(255 255 255)"
                   />
                 </div>
               </div>
@@ -249,6 +285,7 @@
                   </a>
                 </div>
                 <!-- Cash slider -->
+
                 <div class="col-xs-10">
                   <input
                     type="range"
@@ -284,9 +321,9 @@
                 </div>
                 <!-- to date label -->
                 <div
-                  class="col-md-5 col-xs-6"
+                  class="contDate col-md-5 col-xs-6"
                   data-bind="html:tillDate"
-                  style="padding: 1em"
+                  style="padding: 0.5em"
                 ></div>
                 <!-- Days field -->
                 <div class="col-md- col-xs-3">
@@ -344,22 +381,36 @@
               <!-- Calcs and apply -->
               <div class="row">
                 <!-- Borrowing -->
-                <div class="col-xs-2" data-bind="html:summaryBorrowed"></div>
-                <!-- + -->
-                <div class="col-xs-2">+</div>
-                <!-- Interest -->
-                <div class="col-xs-2" data-bind="html:interestRepaid"></div>
+                <div class="contentIntereses">
+                  <div class="contItem" data-bind="html:summaryBorrowed"></div>
+                  <!-- + -->
+
+                  <!-- Interest -->
+                  <div class="contItem" data-bind="html:interestRepaid"></div>
+
+                  <div class="contItem" data-bind="html:seguroRepaid"></div>
+
+                  <div class="contItem" data-bind="html:estudioRepaid"></div>
+
+                  <div class="contItem" data-bind="html:plataformaRepaid"></div>
+
+                  <div class="contItem" data-bind="html:ivaRepaid"></div>
+                </div>
                 <!-- = -->
-                <div class="col-xs-2">=</div>
+                <!-- <div class="col-xs-2 title__h1">=</div> -->
                 <!-- Total to replay -->
                 <div
-                  class="col-xs-9"
+                  class="col-xs-9 title__h2"
                   data-bind="html:totalRepaid"
-                  style="text-align: left; padding: 1em"
+                  style="text-align: left; padding-top: 0.7em; font-weight: 700"
                 ></div>
                 <!-- Apply now! -->
-                <div class="col-xs-9">
-                  <button id="applyBtn" class="btn btn-warning">
+                <div class="col-xs-12">
+                  <button
+                    id="applyBtn"
+                    class="btn-form"
+                    style="background: var(--limeRed); color: white"
+                  >
                     Solicitar Ahora
                   </button>
                 </div>

@@ -31,6 +31,7 @@ $(".detonadorRegistro").click(function () {
     $(".resulReg").removeClass("activo");
   } else {
     $(this).addClass("activo");
+    $(".menuBox").addClass("menuActivo");
     $(".registro").addClass("registroActivo");
     $("#header").addClass("registroActivo");
     $("#body").addClass("registroActivo");
@@ -107,29 +108,21 @@ Date.prototype.addDays = function (days) {
 // http://www.webdevelopersnotes.com/getting-current-time-using-javascript
 // #5
 function getDateInRequiredFormat(durationOfBorrow) {
-  var d_names = new Array(
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado"
-  );
+  var d_names = new Array("Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab");
 
   var m_names = new Array(
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembr",
-    "Diciembre"
+    "Ene",
+    "Fre",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic"
   );
 
   var d = new Date();
@@ -139,13 +132,13 @@ function getDateInRequiredFormat(durationOfBorrow) {
   var curr_date = d.getDate();
   var sup = "";
   if (curr_date == 1 || curr_date == 21 || curr_date == 31) {
-    sup = "st";
+    sup = "";
   } else if (curr_date == 2 || curr_date == 22) {
-    sup = "nd";
+    sup = "";
   } else if (curr_date == 3 || curr_date == 23) {
-    sup = "rd";
+    sup = "";
   } else {
-    sup = "th";
+    sup = "";
   }
   var curr_month = d.getMonth();
   var curr_year = d.getFullYear();
@@ -172,7 +165,7 @@ function AppViewModel() {
   }, this);
 
   this.summaryBorrowed = ko.computed(function () {
-    return "Prestamo" + "<br> $" + this.currentAmount();
+    return "Valor Solicitado" + "<br> $" + this.currentAmount();
   }, this);
 
   this.interestRepaid = ko.computed(function () {
@@ -180,6 +173,38 @@ function AppViewModel() {
       "Intereses" +
       "<br> $" +
       (((this.currentAmount() * 0.8) / 100) * this.currentPeriod()).toFixed(2)
+    );
+  }, this);
+
+  this.seguroRepaid = ko.computed(function () {
+    return (
+      "Seguro" +
+      "<br> $" +
+      (((this.currentAmount() * 0.2) / 100) * this.currentPeriod()).toFixed(2)
+    );
+  }, this);
+
+  this.estudioRepaid = ko.computed(function () {
+    return (
+      "Estudios" +
+      "<br> $" +
+      (((this.currentAmount() * 0.5) / 100) * this.currentPeriod()).toFixed(2)
+    );
+  }, this);
+
+  this.plataformaRepaid = ko.computed(function () {
+    return (
+      "Plataforma" +
+      "<br> $" +
+      (((this.currentAmount() * 0.1) / 100) * this.currentPeriod()).toFixed(2)
+    );
+  }, this);
+
+  this.ivaRepaid = ko.computed(function () {
+    return (
+      "Iva" +
+      "<br> $" +
+      (((this.currentAmount() * 0.9) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
 

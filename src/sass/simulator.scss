@@ -1,15 +1,37 @@
-.input-group,
-.input-group-addon {
-  background-color: white;
-  border-style: none;
-}
-
 /* https://stackoverflow.com/questions/8912660/hiding-the-slider-input-box-in-jquery */
 .simulator {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.input-group-addon:first-child {
+  border: 0;
+}
+.input-group {
+  background: #eeeeee;
+  border: 2px solid #6e6e6e;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.contDate.col-md-5.col-xs-6 {
+  background: #eee;
+  border-radius: 5px;
+  border: 2px solid #6e6e6e;
+  margin: 7px 0;
+}
+
+.ui-slider-track {
+  position: relative;
+  overflow: visible;
+  border-width: 1px;
+  border-style: solid;
+  height: 15px;
+  top: 6px;
+  margin: 0 1em;
+  left: 14px;
 }
 
 .ui-slider-input {
@@ -32,26 +54,56 @@
   padding-left: 0;
 }
 
-.row {
-  margin-right: -23px;
-  margin-left: -38px;
+.col-xs-6 {
+  width: 56%;
 }
 
 a.ui-slider-handle.ui-btn.ui-shadow {
   border-radius: 50%;
+  background: var(--lightGray);
 }
 
-.ui-checkbox,
-.ui-radio {
-  margin: 0.5em 0;
-  position: relative;
+.ui-checkbox .ui-btn,
+.ui-radio .ui-btn {
+  margin: 0;
+  text-align: left;
+  white-space: normal;
+  z-index: 2;
   display: none;
 }
 
-.ui-page-theme-a .ui-btn {
-  // background-color: #f6f6f6;
-  border-color: none;
-  color: var(--white);
-  text-shadow: none;
-  width: 134px;
+.contItem {
+  border-radius: 0.5em;
+  padding: 0.3em 0.8em;
+  color: var(--darkBlue);
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.col-xs-6 {
+  width: 58%;
+  font-weight: 700;
+}
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active {
+  background-color: var(--limeRed);
+}
+
+.contItem br {
+  position: relative;
+  display: contents;
+  justify-content: space-between;
+  width: 459px;
+  margin-right: 69px;
+}
+
+.contentIntereses {
+  position: absolute;
+  left: -234px;
+  top: 24px;
+  border-radius: 1em;
+  padding: 1em;
+  background: var(--lightGrayishBlue);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
 }

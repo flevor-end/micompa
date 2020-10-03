@@ -18,7 +18,7 @@
     border-radius: 24px;
     // position: absolute;
     text-align: center;
-    width: 374px;
+    width: 326px;
     left: 23px;
     position: relative;
     padding: 1.2em;
@@ -29,6 +29,14 @@
   &__description {
     position: relative;
     top: 119px;
+    padding: 0 3em;
+  }
+
+  .col-md-9.col-xs-9.title__h2 {
+    width: 100%;
+    position: relative;
+    left: -27px;
+    font-weight: 700;
   }
   @media screen and (min-width: 768px) {
     text-align: left;
@@ -79,11 +87,11 @@
       border-radius: 24px;
       position: absolute;
       text-align: center;
-      padding: 50px 30px;
+      padding: 10px 30px;
       // width: 700px;
       left: 340px;
       right: 0;
-      top: 130px;
+      top: 100px;
     }
   }
 }
