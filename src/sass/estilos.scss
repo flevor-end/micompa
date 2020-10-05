@@ -7,6 +7,7 @@
 @import "./footer.scss";
 @import "./simulator.scss";
 @import "./login.scss";
+@import "./partner.scss";
 
 :root {
   // ### Primary
@@ -30,6 +31,33 @@ body {
   margin: 0;
   color: var(--grayishBlue);
   overflow-x: hidden;
+}
+
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+  background-color: #f9f9f9;
+  border-color: #bbb;
+  color: #333;
+  text-shadow: none;
+}
+
+.imagenMedia {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  min-width: 100%;
+  // background: var(--white);
+}
+.imgmediaSeg2 {
+  top: -65px;
+  position: relative;
+  margin: 0;
+}
+
+.imagenMedia img {
+  margin-top: 3em;
+  width: 6%;
 }
 
 .copy {

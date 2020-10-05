@@ -191,13 +191,13 @@ function AppViewModel() {
   }, this);
 
   this.summaryBorrowed = ko.computed(function () {
-    return "Valor Solicitado" + "<br> $" + this.currentAmount();
+    return "Valor Solicitado" + "<separador> $" + this.currentAmount();
   }, this);
 
   this.interestRepaid = ko.computed(function () {
     return (
       "Intereses" +
-      "<br> $" +
+      "<separador> $" +
       (((this.currentAmount() * 0.8) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
@@ -205,7 +205,7 @@ function AppViewModel() {
   this.seguroRepaid = ko.computed(function () {
     return (
       "Seguro" +
-      "<br> $" +
+      "<separador> $" +
       (((this.currentAmount() * 0.2) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
@@ -213,7 +213,7 @@ function AppViewModel() {
   this.estudioRepaid = ko.computed(function () {
     return (
       "Estudios" +
-      "<br> $" +
+      "<separador> $" +
       (((this.currentAmount() * 0.5) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
@@ -221,7 +221,7 @@ function AppViewModel() {
   this.plataformaRepaid = ko.computed(function () {
     return (
       "Plataforma" +
-      "<br> $" +
+      "<separador> $" +
       (((this.currentAmount() * 0.1) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
@@ -229,7 +229,7 @@ function AppViewModel() {
   this.ivaRepaid = ko.computed(function () {
     return (
       "Iva" +
-      "<br> $" +
+      "<separador> $" +
       (((this.currentAmount() * 0.9) / 100) * this.currentPeriod()).toFixed(2)
     );
   }, this);
@@ -239,7 +239,7 @@ function AppViewModel() {
       this.currentAmount() *
       (1 + (0.8 / 100) * this.currentPeriod())
     ).toFixed(2);
-    return "Total a pagar" + "<br> $" + total;
+    return "Total a pagar" + "<separador> $" + total;
   }, this);
 
   this.reducePeriodVal = function () {

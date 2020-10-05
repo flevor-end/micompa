@@ -1,6 +1,6 @@
-.section2 {
+.partner {
   text-align: center;
-  background: var(--gray);
+  background: #efefef;
   padding: 5em 0;
   .copy {
     margin-bottom: 4em;
@@ -25,7 +25,7 @@
   }
   @media screen and (min-width: 1024px) {
     &__grid {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
