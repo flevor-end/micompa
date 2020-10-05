@@ -58,7 +58,7 @@
     }
     &__img {
       grid-area: img;
-      min-height: inherit;
+      min-height: 505px;
       // background: none;
       position: absolute;
       width: 400px;
@@ -92,6 +92,7 @@
       left: 340px;
       right: 0;
       top: 100px;
+      height: 345px;
     }
   }
 }

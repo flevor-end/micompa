@@ -100,11 +100,11 @@ h2.form-title2 {
 }
 
 .form-reg,
-.form-registro {
+.form-registro,
+.formTerminos {
   padding: 0 2.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   justify-content: center;
   position: relative;
   align-items: left;
@@ -114,6 +114,29 @@ h2.form-title2 {
   align-items: center;
 }
 
+.formTerminos {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 340px;
+  vertical-align: top;
+  position: relative;
+  display: block;
+}
+
+.btnTerminos {
+  width: 100%;
+  margin: 0 auto;
+  bottom: 27px;
+  position: relative;
+  // background: #ffffffd9;
+}
+button.btnTercont.ui-btn.ui-shadow.ui-corner-all {
+  width: 200px;
+  margin: auto;
+  top: 21px;
+  background: var(--limeRed);
+  color: white;
+}
 .btn-form {
   display: flex;
   justify-content: space-around;
@@ -197,6 +220,22 @@ input {
   display: block;
   position: fixed;
   height: 100vh;
+}
+
+.terminos {
+  display: none;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: rgba(250, 250, 250, 0.95);
+}
+
+.terminos.terminosActivo {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  z-index: 4;
 }
 
 .olvidoContrasena {
