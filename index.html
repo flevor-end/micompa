@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Mi Compa</title>
     <!-- MUST have for Jquery UI and slider -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -31,7 +31,7 @@
       <div class="hook">
         <div class="menuBox">
           <div class="box resultadoMenu1">
-            <div class="contCampo W50">
+            <div class="contCampo">
               <div class="form-top">
                 <h2 class="form-title">Iniciar Sesion <span></span></h2>
               </div>
@@ -70,30 +70,38 @@
                   Estas registrado? <span>Registrarse</span>
                 </h2>
               </div>
-              <div class="olvidoContrasena">
+                             
+              <div class="olvidoContrasena">              
                 <div class="resulOlvidoContrasena">
-                  <form class="form-reg" action="">
-                   <div>
-                      <label>Tu número de cédula</label>
+                  <div class="contCampo">
+                    <div class="form-top">
+                     <h2 class="form-title">Recuperar Contraseña<span></span></h2>
+                    </div>
+                    <form class="form-reg" action="">
+                     <div>
+                        <label>Tu número de cédula</label>
+                        <input
+                          class="contLogin"
+                          type="email"
+                          placeholder="Tu número de cédula"
+                          required
+                          autofocus
+                        />
+                     </div>
+                      <span> le enviaremos un correo para cambiar contraeña</span>
+                    </form>
+                    <div class="btn-form">
                       <input
-                        class="contLogin"
-                        type="email"
-                        placeholder="Tu número de cédula"
-                        required
-                        autofocus
+                        class="btn-ingresar"
+                        id="applyBtn"
+                        type="submit"
+                        value="Recuperar"
+
                       />
-                   </div>
-                    <span> le enviaremos un correo para cambiar contraeña</span>
-                  </form>
-                  <div class="btn-form">
-                    <input
-                      class="btn-ingresar"
-                      type="submit"
-                      value="Recuperar"
-                    />
+                    </div>
                   </div>
                 </div>
-              </div>
+               </div>
             </div>
           </div>
           <span class="iconX cerrarMenu"></span>
@@ -182,8 +190,7 @@
                 </div>
                 <input type="checkbox" name="TERMINOS Y CONDICIONES" id="" />
                 <div class="detonadorTerminos">
-                  <a class="Terminos">Terminos y condiciones</a>
-                  
+                  <a class="Terminos">Terminos y condiciones</a>                  
                 </div>
                 <div class="terminos">
                   <div class="resulTerminos">
@@ -228,43 +235,75 @@
           <img
             class="header__logo"
             src="./static/images/LogoMiCompa.png"
-            alt=""
-          />
-          <input type="checkbox" id="menu" class="menu__checkbox" />
-          <ul class="menu">
-            <li class="menu__item">
-              <a href="">Home</a>
-            </li>
-            <li class="menu__item">
-              <a href="">Quienes somos?</a>
-            </li>
-            <li class="menu__item">
-              <a href="">Como funciona?</a>
-            </li>
-            <li class="menu__item">
-              <a href="">Beneficios</a>
-            </li>
-            <li class="menu__item">
-              <a href="">Referidos</a>
-            </li>
-          </ul>
-          <div class="detonadorMenu">
-            <button
-              class="btn-default warning"
-              style="background: var(--limeRed); color: white"
-            >
-              Iniciar Sesión
-            </button>
+            alt="">
+            <div class="menu_bar">
+              <a href="" class="bt-menu"><span class="menu__button"></span></a>
+            </div>
+
+            <nav>
+              <ul>
+                <li><a href="#"><span class="icon-house"></span>Inicio</a></li>
+                <li><a href="#"><span class="icon-suitcase"></span>Quienes somos?</a></li>
+                <li><a href="#"><span class="icon-rocket"></span>Como funciona?</a></li>
+                <li><a href="#"><span class="icon-earth"></span>Beneficios</a></li>
+                <li><a href="#"><span class="icon-mail"></span>Referidos</a></li>
+              </ul>
+            </nav>
+
+          
+            <!-- <div class="detonadorMenuHbg">
+            <label class="menuHbg__button " type="submit">
           </div>
-          <div class="detonadorRegistro">
-            <button
-              class="btn-default"
-              style="background: var(--brightCyan); color: white"
-            >
-              Registrarse
-            </button>
+          
+          <div class="menuFlex">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a href="">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Quienes somos?</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Como funciona?</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Beneficios</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Referidos</a>
+                </li>
+              </ul>
+            </div>
+          <div class="menuHbg">
+            <ul class="resultadoMenuHbg">
+              <li class="menu__item">
+                <a href="">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="">Quienes somos?</a>
+              </li>
+              <li class="menu__item">
+                <a href="">Como funciona?</a>
+              </li>
+              <li class="menu__item">
+                <a href="">Beneficios</a>
+              </li>
+              <li class="menu__item">
+                <a href="">Referidos</a>
+              </li>
+            </ul>
+            
+          </div> -->
+          
+          <div class="col-md-3" style="display: flex;
+            justify-content: space-between;">
+            <div class="detonadorMenu">
+              <input class="btn-ingresar" type="submit" value="Iniciar Sesión" />            
+            </div>
+            <div class="detonadorRegistro">
+              <input class="btn-submit" type="submit" value="Registrarse"/>
           </div>
-          <label for="menu" class="menu__button"></label>
+          </div>
         </div>
       </div>
     </header>
@@ -280,8 +319,7 @@
                 <div class="col-md-9 col-xs-9 title__h2"></div>
                 <!-- Cash field -->
                 <div
-                  class="col-md-5 col-xs-6"
-                  style="font-size: 24px; text-align: left"
+                  class="col-md-5 col-xs-6 title_qMonto"
                 >
                   Que monto necesitas?
                 </div>
@@ -434,12 +472,13 @@
                 ></div>
                 <!-- Apply now! -->
                 <div class="col-xs-12">
-                  <button
+                  <input class="btn-Solicitud detonadorRegistro" type="submit" value="Solicitar Prestamo" />
+                  <!-- <button
                     id="applyBtn"
                     class="btn-form"
                     style="background: var(--limeRed); color: white"
-                  >
-                    Solicitar Ahora
+                  > -->
+                    
                   </button>
                 </div>
               </div>
@@ -457,10 +496,11 @@
         </div>
       </div>
     </section>
-    <div class="imagenMedia">
+      <div class="imagenMedia">
         <img src="./static/images/7-06.png">
-    </div>
+      </div>
     <section class="section2">
+
       <div class="wrapper">
         <h1 class="title__h1">Requisitos para solicitar mi préstamo</h1>
         <p class="copy">
@@ -544,9 +584,9 @@
           </ul>
       </div>
     </section>
-    <div class="imagenMedia imgmediaSeg2">
-        <img src="./static/images/7-06.png">
-    </div>
+      <div class="imgmediaSeg2">
+          <img src="./static/images/7-06.png">
+      </div>
     <section class="articles">
       <div class="wrapper">
         <h1 class="title__h1">Últimas Noticias</h1>
@@ -657,7 +697,8 @@
           <a href="#" class="footer__link"> Politicas </a>
         </div>
         <div class="footer__button">
-          <button class="button">Registrarse</button>
+          
+          <div class="btnSolicitud"><input class="btn-Solicitud detonadorRegistro" type="submit" value="Registrarse"></input></div>
         </div>
         <p class="footer__copyright">© Mi Compa. All Rights Reserved</p>
       </div>

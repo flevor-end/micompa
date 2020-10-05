@@ -8,16 +8,13 @@ $(".detonadorMenu").click(function () {
     $(".menuBox").removeClass("menuActivo");
     $("#header").removeClass("menuActivo");
     $("#body").removeClass("menuActivo");
-    $(".item").removeClass("activo");
     $(".box").removeClass("activo");
     $(".resultadoMenu1").removeClass("activo");
-    $(".categoriaN1").removeClass("activo");
   } else {
     $(this).addClass("activo");
     $(".menuBox").addClass("menuActivo");
     $("#header").addClass("menuActivo");
     $("#body").addClass("menuActivo");
-    $(".itemMenuRegister").addClass("activo");
     $(".resultadoMenu1").addClass("activo");
   }
 });
@@ -31,7 +28,6 @@ $(".detonadorRegistro").click(function () {
     $(".resulReg").removeClass("activo");
   } else {
     $(this).addClass("activo");
-    $(".menuBox").addClass("menuActivo");
     $(".registro").addClass("registroActivo");
     $("#header").addClass("registroActivo");
     $("#body").addClass("registroActivo");
@@ -55,6 +51,22 @@ $(".detonadorTerminos").click(function () {
     $(".resulTerminos").addClass("activo");
   }
 });
+
+$(".detonadorMenuHbg").click(function () {
+  if ($(this).hasClass("activo")) {
+    $(this).removeClass("activo");
+    $(".menuHbg").removeClass("menuHbgActivo");
+    $("#header").removeClass("menuHbgActivo");
+    $("#body").removeClass("menuHbgActivo");
+    $(".resultadoMenuHbg").removeClass("activo");
+  } else {
+    $(this).addClass("activo");
+    $(".menuHbg").addClass("menuHbgActivo");
+    $("#header").addClass("menuHbgActivo");
+    $("#body").addClass("menuHbgActivoo");
+    $(".resultadoMenuHbg").addClass("activo");
+  }
+});
 $(".detonadorRecuperar").click(function () {
   if ($(this).hasClass("activo")) {
     $(this).removeClass("activo");
@@ -63,12 +75,15 @@ $(".detonadorRecuperar").click(function () {
     $("#body").removeClass("olvidoContrasenaActivo");
     $(".box").removeClass("activo");
     $(".resulOlvidoContrasena").removeClass("activo");
+    $(".resultadoMenu1").removeClass("activo");
+    $(".menuBox").removeClass("menuActivo");
   } else {
     $(this).addClass("activo");
     $(".olvidoContrasena").addClass("olvidoContrasenaActivo");
     $("#header").addClass("olvidoContrasenaActivo");
     $("#body").addClass("olvidoContrasenaActivo");
     $(".resulOlvidoContrasena").addClass("activo");
+    $(".resultadoMenu1").removeClass("activo");
   }
 });
 
@@ -101,6 +116,28 @@ $(".itemMenuRegister").click(function () {
     $(".resultadoMenu1").addClass("activo");
   }
 });
+
+$(document).ready(main);
+
+var contador = 1;
+
+function main() {
+  $(".menu_bar").click(function () {
+    // $('nav').toggle();
+
+    if (contador == 1) {
+      $("nav").animate({
+        left: "0",
+      });
+      contador = 0;
+    } else {
+      contador = 1;
+      $("nav").animate({
+        left: "-100%",
+      });
+    }
+  });
+}
 
 /* custom binding handler by http://www.hughanderson.com/ */
 ko.bindingHandlers.slider = {

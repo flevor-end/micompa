@@ -1,67 +1,175 @@
-.menu {
-  display: none;
-  list-style: none;
-  padding: 0;
+// .menuHbg.menuHbgActivo {
+//   display: none;
+//   list-style: none;
+// }
+// .menuFlex {
+//   display: none;
+// }
+
+.menu__button {
+  // border: 1px solid green;
+  width: 40px;
+  height: 40px;
+  background: url("../images/icon-hamburger.svg") no-repeat center;
+}
+
+// .menuHbg__button_cerrar {
+//   background: url("../images/icon-close.svg") no-repeat center;
+// }
+
+// .ui-page-theme-a a {
+//   text-decoration: none;
+//   color: var(--grayBlue);
+//   padding: 0 0.8em;
+// }
+
+// .resultadoMenuHbg {
+//   display: block;
+//   position: absolute;
+//   top: 100%;
+//   padding: 1em;
+//   left: 0;
+//   right: 0;
+//   height: 100vh;
+//   background: linear-gradient(to bottom, var(--darkBlue) 0%, transparent 90%);
+//   // .menu__item {
+//   //   &:first-of-type a {
+//   //     padding-top: 2em;
+//   //     // border-radius: 0.5em 0.5em 0 0;
+//   //   }
+//   //   &:last-of-type a {
+//   //     padding-bottom: 2em;
+//   //     // border-radius: 0 0 0.5em 0.5em;
+//   //   }
+//   // }
+//   a {
+//     background: white;
+//     padding: 0.8em 1em;
+//     color: var(--darkBlue);
+//     font-size: 1.1em;
+//     display: block;
+//     text-align: center;
+//     flex: 1;
+//   }
+// }
+
+// @media screen and (min-width: 1024px) {
+//   ul.menu {
+//     display: flex;
+//   }
+//   .menu__item {
+//     display: flex;
+//     align-items: center;
+//   }
+//   .menuHbg__button {
+//     display: none;
+//     background: none;
+//   }
+//   .ui-mobile label,
+//   .ui-controlgroup-label {
+//     display: none;
+//     margin: 0 0 0.4em;
+//   }
+//   .resultadoMenuHbg {
+//     display: none;
+//   }
+//   .menuFlex {
+//     display: flex;
+//     position: relative;
+//   }
+// }
+
+* {
   margin: 0;
-  &__button {
-    width: 40px;
-    height: 40px;
-    background: url("../images/icon-hamburger.svg") no-repeat center;
+  padding: 0;
+}
+
+body {
+  // background: #fffffa;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  // width: 100%;
+  // max-width: 1000px;
+  margin: auto;
+  background: var(--white);
+}
+
+.menu_bar {
+  display: flex;
+}
+
+header nav ul {
+  overflow: hidden;
+  list-style: none;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+header nav ul li span {
+  margin-right: 10px;
+}
+
+header nav ul li a:hover {
+  background: var(--grayBlue);
+}
+
+section {
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    width: 80%;
+    height: 100%;
+    left: -100%;
+    margin: 0;
+    position: fixed;
+    top: 80px;
   }
-  a {
+
+  header nav ul li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .menu_bar {
+    display: flex;
+    width: 16%;
+    // background: #ccc;
+    right: -85px;
+    position: relative;
+  }
+
+  .menu_bar .bt-menu {
+    display: block;
+    // padding: 20px;
+    background: none;
+    color: #fff;
     text-decoration: none;
-    color: var(--grayishBlue);
-    padding: 0 0.8em;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  &__item {
-    display: flex;
-    align-items: center;
-  }
-  &__checkbox {
-    display: none;
-    &:checked {
-      & ~ .menu__button {
-        background: url("../images/icon-close.svg") no-repeat center;
-      }
-      & ~ .menu {
-        display: block;
-        position: absolute;
-        top: 100%;
-        padding: 1em;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        background: linear-gradient(
-          to bottom,
-          var(--darkBlue) 0%,
-          transparent 90%
-        );
-        .menu__item {
-          &:first-of-type a {
-            padding-top: 2em;
-            border-radius: 0.5em 0.5em 0 0;
-          }
-          &:last-of-type a {
-            padding-bottom: 2em;
-            border-radius: 0 0 0.5em 0.5em;
-          }
-        }
-        a {
-          background: white;
-          padding: 0.8em 1em;
-          color: var(--darkBlue);
-          font-size: 1.1em;
-          display: block;
-          text-align: center;
-          flex: 1;
-        }
-      }
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    &__button {
-      display: none;
-    }
+
+  .menu_bar span {
+    float: right;
+    font-size: 40px;
   }
 }

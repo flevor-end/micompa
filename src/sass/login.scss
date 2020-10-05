@@ -57,8 +57,8 @@
 .contCampo {
   display: block;
   position: relative;
-  margin: 5% auto;
-  max-width: 600px;
+  margin: 15% auto;
+  max-width: 680px;
   // height: auto;
   background-color: #efefef;
   padding-bottom: 1rem;
@@ -140,16 +140,18 @@ button.btnTercont.ui-btn.ui-shadow.ui-corner-all {
 .btn-form {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
+  // margin-top: 1rem;
 }
 
 .contLogin,
 .btn-ingresar,
+.btn-submit,
+.btn-Solicitud,
 .formclas,
 .formclas {
   background-color: #f7f5f5;
   padding: 1rem;
-  margin: 1rem 0;
+  // margin: 1rem 0;
   border-bottom: solid #c8c8c8 0.2rem;
   transition: all 0.5s;
   border-radius: 5px;
@@ -172,12 +174,28 @@ input {
   cursor: pointer;
 }
 
-.btn-ingresar {
+.btn-ingresar,
+.btn-Solicitud {
   background-color: var(--limeRed);
   border-radius: 5px;
   border-bottom: solid var(--limeRed) 0.2rem;
   color: var(--white);
   width: 162px;
+  display: none;
+}
+
+.btn-Solicitud {
+  display: block;
+  margin: auto;
+}
+
+.btn-submit {
+  background-color: var(--brightCyan);
+  border-radius: 5px;
+  border-bottom: solid hsl(192deg 83% 35%) 0.2rem;
+  color: var(--white);
+  width: 162px;
+  display: none;
 }
 
 .btn-submit:hover {
@@ -238,26 +256,6 @@ input {
   z-index: 4;
 }
 
-.olvidoContrasena {
-  display: none;
-  position: relative;
-  // margin: 5% auto;
-  max-width: 420px;
-  // height: auto;
-  background-color: #efefef;
-  padding-bottom: 1rem;
-  border-radius: 8px;
-}
-
-.olvidoContrasena.olvidoContrasenaActivo {
-  display: block;
-  position: fixed;
-  height: 100vh;
-  top: 156px;
-  right: 478px;
-  width: 395px;
-}
-
 span.iconX {
   width: 30px;
   height: 30px;
@@ -287,7 +285,7 @@ span.iconX:after {
 
 .custom-select {
   width: 100%;
-  display: flex;
+  // display: flex;
   position: relative;
 }
 
@@ -298,7 +296,7 @@ span.iconX:after {
 
 .selector {
   margin: 0 0.5em;
-  width: 46%;
+  // width: 46%;
 }
 label {
   font-weight: 700;
@@ -347,20 +345,386 @@ input.contLogin.loginSize {
 }
 
 @media screen and (min-width: 1024px) {
-  .ui-btn {
-    font-size: 16px;
-    margin: 0.5em 0;
-    padding: 0.6em 1em;
+  .W50.paddingWidth {
+    width: calc(50% - 32.5px);
+  }
+
+  .resultadoMenu {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 333px);
+    height: 100%;
+  }
+
+  .contentResultados {
+    width: calc(100% - 205.5px);
+    // display: inline-block;
+  }
+  .resultadoMenu1 {
+    height: calc(0vh - 0px);
+    position: relative;
+    display: block;
+    border-width: 0;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+  .resultadoMenu1.activo {
+    height: calc(100vh - 40px);
+  }
+
+  .resulReg {
+    height: calc(0vh - 0px);
+    position: relative;
+    display: block;
+    border-width: 0;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+  .resulReg.activo {
+    height: calc(100vh - 2px);
+  }
+
+  .olvidoContraseña {
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: rgba(250, 250, 250, 0.95);
+  }
+  .olvidoContraseña.olvidoContraseñaActivo {
+    display: block;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .resulOlvidoContrasena {
+    height: calc(0vh - 0px);
+    position: relative;
+    display: block;
+    border-width: 0;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+
+  .resulOlvidoContrasena.activo {
+    height: calc(100vh - 15px);
+  }
+
+  .contCampo {
     display: block;
     position: relative;
+    margin: 5% auto;
+    max-width: 600px;
+    // height: auto;
+    background-color: #efefef;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  // .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+  //   width: 245px;
+  // }
+
+  .form-top {
+    width: 100%;
     text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    padding: 1rem 0 1rem;
+    border-top: solid 0.4rem var(--limeRed);
+    border-radius: 8px;
+  }
+
+  .form-top h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #313639;
+  }
+
+  h2.form-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  h2 span {
+    color: var(--limeRed);
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  }
+
+  h2.form-title2 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .form-reg,
+  .form-registro,
+  .formTerminos {
+    padding: 0 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: left;
+  }
+
+  .form-reg {
+    align-items: center;
+  }
+
+  .formTerminos {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 340px;
+    vertical-align: top;
+    position: relative;
+    display: block;
+  }
+
+  .btnTerminos {
+    width: 100%;
+    margin: 0 auto;
+    bottom: 27px;
+    position: relative;
+    // background: #ffffffd9;
+  }
+  button.btnTercont.ui-btn.ui-shadow.ui-corner-all {
+    width: 200px;
+    margin: auto;
+    top: 21px;
+    background: var(--limeRed);
+    color: white;
+  }
+  .btn-form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+
+  .contLogin,
+  .btn-ingresar,
+  .btn-submit,
+  .btn-Solicitud,
+  .formclas,
+  .formclas {
+    background-color: #f7f5f5;
+    padding: 0.8em;
+    // margin: 1rem 0;
+    border-bottom: solid #c8c8c8 0.2rem;
+    transition: all 0.5s;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  a.foot-Lnk.ui-link {
+    padding-top: 1em;
+  }
+
+  input {
+    border: 0;
+  }
+
+  .contLogin:focus {
+    border-bottom: solid var(--limeRed) 0.2rem;
+  }
+
+  .formclas .btn-enviar {
+    width: 40%;
+    border-bottom: none;
+    background-color: #31e56f;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-ingresar,
+  .btn-Solicitud {
+    background-color: var(--limeRed);
+    border-radius: 5px;
+    border-bottom: solid hsl(4deg 86% 40%) 0.2rem;
+    color: var(--white);
+    width: 116px;
+    display: block;
+    margin: auto;
+  }
+
+  .btn-Solicitud {
+    width: 165px;
+  }
+
+  .btn-submit {
+    background-color: var(--brightCyan);
+    border-radius: 5px;
+    border-bottom: solid hsl(192deg 83% 35%) 0.2rem;
+    color: var(--white);
+    width: 116px;
+    display: block;
+  }
+
+  .btn-submit:hover {
+    background: #0f86a3;
+    border-bottom: solid var(--brightCyan) 0.2rem;
+  }
+
+  .btn-ingresar:hover {
+    background-color: hsl(4deg 86% 40%);
+  }
+
+  .hook {
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 90;
+  }
+  .menuBox {
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: rgba(250, 250, 250, 0.95);
+  }
+  .menuBox.menuActivo {
+    display: block;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .registro {
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: rgba(250, 250, 250, 0.95);
+  }
+  .registro.registroActivo {
+    display: block;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .terminos {
+    display: none;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: rgba(250, 250, 250, 0.95);
+  }
+
+  .terminos.terminosActivo {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    z-index: 4;
+  }
+
+  .olvidoContrasena {
+    display: none;
+    position: relative;
+    // margin: 5% auto;
+    max-width: 420px;
+    // height: auto;
+    // background-color: #efefef;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .olvidoContrasena.olvidoContrasenaActivo {
+    display: block;
+    position: fixed;
+    height: 55vh;
+    top: 156px;
+    right: 478px;
+    width: 395px;
+  }
+
+  span.iconX {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #232527;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    right: 30px;
+  }
+  span.iconX:before,
+  span.iconX:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: #f5f5f5;
+    transform: rotate(45deg);
+    transition: 0.4s;
+  }
+  span.iconX:after {
+    transform: rotate(-45deg);
+  }
+
+  .custom-select {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .selectCC {
+    display: flex;
+    position: relative;
+  }
+
+  .selector {
+    margin: 0 0.5em;
+    width: 48%;
+  }
+  label {
+    font-weight: 700;
+  }
+
+  .detonadorMenu {
+    margin-bottom: -44px;
+  }
+
+  .tipoDoc {
+    vertical-align: bottom;
+    position: relative;
+    margin-top: 2em;
+    margin-top: 1.6em;
+  }
+
+  a.Terminos.ui-link {
+    color: var(--limeRed);
+    left: 39px;
+    width: calc(90% - 34px);
+    position: relative;
+  }
+
+  a.foot-Lnk.ui-link {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    color: black;
+    font-weight: 300;
+  }
+
+  .ui-input-text input,
+  .ui-input-search input {
+    margin: 0;
+    min-height: 2.8em;
+    text-align: left;
+    border: 0;
+    background: var(--lightGrayishBlue);
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+  }
+
+  input.contLogin.loginSize {
+    width: 300px;
   }
 }

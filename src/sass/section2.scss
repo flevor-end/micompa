@@ -8,11 +8,12 @@
   }
   &__item {
     // border: 1px solid red;
+    margin: 1.5em;
     .copy {
       margin-bottom: 2em;
     }
     img {
-      margin-bottom: 1.5em;
+      margin: 1.5em;
     }
   }
   @media screen and (min-width: 768px) {

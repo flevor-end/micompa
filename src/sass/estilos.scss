@@ -42,22 +42,22 @@ body {
   text-shadow: none;
 }
 
-.imagenMedia {
+.imagenMedia,
+.imgmediaSeg2 {
   display: flex;
   justify-content: center;
   margin: 2em;
   min-width: 100%;
+  position: relative;
+  margin: 0;
+  img {
+    margin-top: 3em;
+    width: 6%;
+  }
   // background: var(--white);
 }
 .imgmediaSeg2 {
   top: -65px;
-  position: relative;
-  margin: 0;
-}
-
-.imagenMedia img {
-  margin-top: 3em;
-  width: 6%;
 }
 
 .copy {
@@ -136,5 +136,11 @@ body {
   &__twitter {
     @include icon;
     background-image: url("../images/icon-twitter.svg");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .imagenMedia {
+    top: -67px;
   }
 }
