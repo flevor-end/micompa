@@ -9,17 +9,14 @@
     margin-bottom: 2.5em;
   }
   &__img {
-    // height: 300px;
-
     margin-bottom: 1.2em;
     top: 98px;
     background: var(--lightGrayishBlue);
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    // position: absolute;
     text-align: center;
-    width: 326px;
-    left: 6px;
+    width: 96vw;
+    left: -14px;
     position: relative;
     padding: 1.2em;
   }
@@ -55,6 +52,7 @@
     }
     &__description {
       // border: 1px solid green;
+      top: -40px;
     }
     &__img {
       grid-area: img;
@@ -63,7 +61,7 @@
       position: absolute;
       width: 400px;
       left: 0;
-      top: 0;
+      top: 91;
       // height: 768px;
       // background: url("../images/image-mockups.png") left bottom no-repeat;
       background-size: cover;

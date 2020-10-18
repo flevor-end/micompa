@@ -45,8 +45,8 @@
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
   border-radius: 24px;
   text-align: center;
-  width: 326px;
-  left: 6px;
+  width: 96vw;
+  left: -14px;
   position: relative;
   padding: 1.2em;
 }
@@ -80,13 +80,16 @@
     grid-template-areas: "description img";
     grid-template-columns: 330px 1fr;
   }
+  .hero__description {
+    top: -40px;
+  }
   .hero__img {
     grid-area: img;
     min-height: 505px;
     position: absolute;
     width: 400px;
     left: 0;
-    top: 0;
+    top: 91;
     background-size: cover;
   }
 }
@@ -164,7 +167,7 @@ section {
   padding: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   header nav {
     width: 80%;
     height: 100%;
@@ -182,9 +185,9 @@ section {
 
   .menu_bar {
     display: flex;
-    width: 16%;
-    right: -85px;
     position: relative;
+    width: 77%;
+    justify-content: flex-end;
   }
 
   .menu_bar .bt-menu {
@@ -430,7 +433,6 @@ section {
   }
 }
 
-/* https://stackoverflow.com/questions/8912660/hiding-the-slider-input-box-in-jquery */
 .simulator {
   padding-right: 15px;
   padding-left: 15px;
@@ -673,7 +675,7 @@ separador {
   .contentIntereses {
     position: absolute;
     left: -287px;
-    top: 231px;
+    top: 305px;
     border-radius: 1em;
     padding: 1em;
     background: var(--lightGrayishBlue);
