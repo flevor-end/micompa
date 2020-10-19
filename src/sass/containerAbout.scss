@@ -1,0 +1,53 @@
+section.about {
+  margin: auto;
+  background: var(--white);
+  .title__h1 {
+    text-align: center;
+  }
+}
+
+.containerAbout {
+  &__iaimg {
+    width: 33vw;
+    margin: auto;
+  }
+  img {
+    width: 33vw;
+    margin: auto;
+  }
+  .title__h2 {
+    color: var(--limeRed);
+    text-align: left;
+  }
+
+  .copy {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .containerAbout {
+    display: flex;
+    flex-flow: row nowrap;
+    &__itemAbout {
+      display: flex;
+      align-items: flex-start;
+      margin: 5% 0;
+    }
+    &__iaimg {
+      display: flex;
+      width: 36vw;
+    }
+    img {
+      width: 36vw;
+      margin: auto;
+    }
+    &__iacont {
+      display: block;
+      // width: 700px;
+      margin-left: 5%;
+    }
+  }
+}

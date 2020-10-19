@@ -1,7 +1,7 @@
-.hero {
+.heroAbout {
   text-align: center;
   padding-bottom: 5em;
-  background: url("../images/bg-intro-mobile.svg") center no-repeat;
+  background: url("../images/quienesSomos.jpg") center no-repeat;
   margin: 0 calc(-1 * var(--wrapperSpace));
   background-size: cover;
 
@@ -37,7 +37,7 @@
   }
   @media screen and (min-width: 768px) {
     text-align: left;
-    background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
+    background: url("../images/quienesSomos.jpg") no-repeat;
     background-size: cover;
     min-height: 550px;
     box-sizing: border-box;

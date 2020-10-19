@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   padding: 1em 0;
   justify-content: space-between;
@@ -94,6 +93,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .hero__description {
+    top: 119px;
+  }
   .hero__imageSrc {
     display: block;
     position: relative;
@@ -712,12 +714,12 @@ separador {
   position: relative;
   display: block;
   border-width: 0;
-  transition: 0.4s;
   overflow: hidden;
 }
 
 .resultadoMenu1.activo {
   height: calc(100vh - 40px);
+  overflow: hidden;
 }
 
 .resulReg {
@@ -725,32 +727,24 @@ separador {
   position: relative;
   display: block;
   border-width: 0;
-  transition: 0.4s;
   overflow: hidden;
 }
 
 .resulReg.activo {
   height: calc(100vh - 2px);
-}
-
-.resulOlvidoContrasena {
-  height: calc(0vh - 0px);
-  position: relative;
-  display: block;
-  border-width: 0;
-  transition: 0.4s;
-  overflow: hidden;
+  overflow: overlay;
 }
 
 .resulOlvidoContrasena.activo {
-  height: calc(100vh - 15px);
+  position: relative;
+  top: -25em;
 }
 
 .contCampo {
   display: block;
   position: relative;
   margin: 15% auto;
-  max-width: 680px;
+  max-width: 85vw;
   background-color: #efefef;
   padding-bottom: 1rem;
   border-radius: 8px;
@@ -804,10 +798,14 @@ h2.form-title2 {
 .formTerminos {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 340px;
+  height: 290px;
   vertical-align: top;
   position: relative;
   display: block;
+}
+
+.detonadorTerminos {
+  margin-bottom: 1em;
 }
 
 .btnTerminos {
@@ -872,7 +870,7 @@ input {
 
 .btn-Solicitud {
   display: block;
-  margin: auto;
+  margin: 1em auto;
 }
 
 .btn-submit {
@@ -929,6 +927,21 @@ input {
   height: 100vh;
 }
 
+.olvidoContrasena {
+  display: none;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: rgba(250, 250, 250, 0.95);
+}
+
+.olvidoContrasena.olvidoContrasenaActivo {
+  display: block;
+  position: fixed;
+  height: 100vh;
+}
+
 .terminos {
   display: none;
   position: relative;
@@ -943,6 +956,7 @@ input {
   position: fixed;
   height: 100vh;
   z-index: 4;
+  top: 0px;
 }
 
 span.iconX {
@@ -1028,7 +1042,7 @@ a.foot-Lnk.ui-link {
 }
 
 input.contLogin.loginSize {
-  width: 300px;
+  width: auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1071,35 +1085,7 @@ input.contLogin.loginSize {
   }
 
   .resulReg.activo {
-    height: calc(100vh - 2px);
-  }
-
-  .olvidoContraseña {
-    display: none;
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 40px);
-    background: rgba(250, 250, 250, 0.95);
-  }
-
-  .olvidoContraseña.olvidoContraseñaActivo {
-    display: block;
-    position: fixed;
-    height: 100vh;
-  }
-
-  .resulOlvidoContrasena {
-    height: calc(0vh - 0px);
-    position: relative;
-    display: block;
-    border-width: 0;
-    transition: 0.4s;
-    overflow: hidden;
-  }
-
-  .resulOlvidoContrasena.activo {
-    height: calc(100vh - 15px);
+    height: 106vh;
   }
 
   .contCampo {
@@ -1307,23 +1293,6 @@ input.contLogin.loginSize {
     z-index: 4;
   }
 
-  .olvidoContrasena {
-    display: none;
-    position: relative;
-    max-width: 420px;
-    padding-bottom: 1rem;
-    border-radius: 8px;
-  }
-
-  .olvidoContrasena.olvidoContrasenaActivo {
-    display: block;
-    position: fixed;
-    height: 55vh;
-    top: 156px;
-    right: 478px;
-    width: 395px;
-  }
-
   span.iconX {
     width: 30px;
     height: 30px;
@@ -1431,6 +1400,9 @@ span.iconX:after {
 .partner__item img {
   margin-bottom: 1.5em;
 }
+.partner__item p {
+  padding-bottom: 5%;
+}
 @media screen and (min-width: 768px) {
   .partner {
     text-align: center;
@@ -1443,6 +1415,275 @@ span.iconX:after {
 }
 @media screen and (min-width: 1024px) {
   .partner__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .partner p {
+    padding-bottom: 5%;
+  }
+}
+
+.heroAbout {
+  text-align: center;
+  padding-bottom: 5em;
+  background: url("../images/quienesSomos.jpg") center no-repeat;
+  margin: 0 calc(-1 * var(--wrapperSpace));
+  background-size: cover;
+}
+.heroAbout .copy {
+  margin-bottom: 2.5em;
+}
+.heroAbout__img {
+  margin-bottom: 1.2em;
+  top: 98px;
+  background: var(--lightGrayishBlue);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  text-align: center;
+  width: 96vw;
+  left: -14px;
+  position: relative;
+  padding: 1.2em;
+}
+.heroAbout__imageSrc {
+  display: none;
+}
+.heroAbout__description {
+  position: relative;
+  top: 119px;
+  padding: 0 3em;
+}
+.heroAbout .col-md-9.col-xs-9.title__h2 {
+  width: 100%;
+  position: relative;
+  left: -27px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .heroAbout {
+    text-align: left;
+    background: url("../images/quienesSomos.jpg") no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    box-sizing: border-box;
+  }
+  .heroAbout__content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: 550px;
+    grid-template-areas: "description img";
+    grid-template-columns: 330px 1fr;
+  }
+  .heroAbout__description {
+    top: -40px;
+  }
+  .heroAbout__img {
+    grid-area: img;
+    min-height: 505px;
+    position: absolute;
+    width: 400px;
+    left: 0;
+    top: 91;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroAbout__description {
+    top: 119px;
+  }
+  .heroAbout__imageSrc {
+    display: block;
+    position: relative;
+    top: 180px;
+    z-index: 1;
+    margin: 0 auto;
+  }
+  .heroAbout__img {
+    background: var(--lightGrayishBlue);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    position: absolute;
+    text-align: center;
+    padding: 10px 30px;
+    left: 340px;
+    right: 0;
+    top: 100px;
+    height: 345px;
+  }
+}
+
+.heroBeneficios {
+  text-align: center;
+  padding-bottom: 10em;
+  background: url("../images/1-02.jpg") center no-repeat;
+  margin: 75px calc(-1 * var(--wrapperSpace));
+  background-size: cover;
+}
+.heroBeneficios .copy {
+  margin-bottom: 2.5em;
+}
+.heroBeneficios__img {
+  margin-bottom: 1.2em;
+  top: 98px;
+  background: var(--lightGrayishBlue);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  text-align: center;
+  width: 96vw;
+  left: -14px;
+  position: relative;
+  padding: 1.2em;
+}
+.heroBeneficios__imageSrc {
+  display: none;
+}
+.heroBeneficios__description {
+  position: relative;
+  top: 119px;
+  padding: 0 3em;
+}
+.heroBeneficios .col-md-9.col-xs-9.title__h2 {
+  width: 100%;
+  position: relative;
+  left: -27px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .heroBeneficios {
+    text-align: left;
+    background: url("../images/1-02.jpg") no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    box-sizing: border-box;
+  }
+  .heroBeneficios__content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: 550px;
+    grid-template-areas: "description img";
+    grid-template-columns: 330px 1fr;
+  }
+  .heroBeneficios__description {
+    top: -40px;
+  }
+  .heroBeneficios__img {
+    grid-area: img;
+    min-height: 505px;
+    position: absolute;
+    width: 400px;
+    left: 0;
+    top: 91;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroBeneficios__description {
+    top: 119px;
+  }
+  .heroBeneficios__imageSrc {
+    display: block;
+    position: relative;
+    top: 180px;
+    z-index: 1;
+    margin: 0 auto;
+  }
+  .heroBeneficios__img {
+    background: var(--lightGrayishBlue);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    position: absolute;
+    text-align: center;
+    padding: 10px 30px;
+    left: 340px;
+    right: 0;
+    top: 100px;
+    height: 345px;
+  }
+}
+
+section.about {
+  margin: auto;
+  background: var(--white);
+}
+section.about .title__h1 {
+  text-align: center;
+}
+
+.containerAbout__iaimg {
+  width: 33vw;
+  margin: auto;
+}
+.containerAbout img {
+  width: 33vw;
+  margin: auto;
+}
+.containerAbout .title__h2 {
+  color: var(--limeRed);
+  text-align: left;
+}
+.containerAbout .copy {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width: 1024px) {
+  .containerAbout {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .containerAbout__itemAbout {
+    display: flex;
+    align-items: flex-start;
+    margin: 5% 0;
+  }
+  .containerAbout__iaimg {
+    display: flex;
+    width: 36vw;
+  }
+  .containerAbout img {
+    width: 36vw;
+    margin: auto;
+  }
+  .containerAbout__iacont {
+    display: block;
+    margin-left: 5%;
+  }
+}
+.beneficios {
+  text-align: center;
+  background: var(--gray);
+}
+.beneficios .copy {
+  margin-bottom: 4em;
+  font-size: 1em;
+}
+.beneficios__item {
+  margin: 1.5em;
+}
+.beneficios__item .copy {
+  margin-bottom: 2em;
+}
+.beneficios__item img {
+  margin: 1.5em;
+  width: 50%;
+}
+.beneficios__item .btnSolicitud {
+  padding-top: 5%;
+}
+@media screen and (min-width: 768px) {
+  .beneficios {
+    text-align: center;
+  }
+  .beneficios__grilla {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .beneficios__grilla {
     grid-template-columns: repeat(4, 1fr);
   }
 }

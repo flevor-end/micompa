@@ -9,13 +9,14 @@ $(".detonadorMenu").click(function () {
     $("#header").removeClass("menuActivo");
     $("#body").removeClass("menuActivo");
     $(".box").removeClass("activo");
-    $(".resultadoMenu1").removeClass("activo");
   } else {
     $(this).addClass("activo");
     $(".menuBox").addClass("menuActivo");
     $("#header").addClass("menuActivo");
     $("#body").addClass("menuActivo");
     $(".resultadoMenu1").addClass("activo");
+    $(".resulReg").removeClass("activo");
+    $(".registro").removeClass("registroActivo");
   }
 });
 $(".detonadorRegistro").click(function () {
@@ -49,6 +50,7 @@ $(".detonadorTerminos").click(function () {
     $("#header").addClass("registroActivo");
     $("#body").addClass("registroActivo");
     $(".resulTerminos").addClass("activo");
+    $(".terminos").addClass("terminosActivo");
   }
 });
 
@@ -74,9 +76,6 @@ $(".detonadorRecuperar").click(function () {
     $("#header").removeClass("olvidoContrasenaActivo");
     $("#body").removeClass("olvidoContrasenaActivo");
     $(".box").removeClass("activo");
-    $(".resulOlvidoContrasena").removeClass("activo");
-    $(".resultadoMenu1").removeClass("activo");
-    $(".menuBox").removeClass("menuActivo");
   } else {
     $(this).addClass("activo");
     $(".olvidoContrasena").addClass("olvidoContrasenaActivo");
@@ -84,6 +83,7 @@ $(".detonadorRecuperar").click(function () {
     $("#body").addClass("olvidoContrasenaActivo");
     $(".resulOlvidoContrasena").addClass("activo");
     $(".resultadoMenu1").removeClass("activo");
+    $(".menuBox").addClass("menuActivo");
   }
 });
 
