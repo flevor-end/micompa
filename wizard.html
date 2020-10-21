@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>wizard con validador</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Mi Compa</title>
+    <!-- MUST have for Jquery UI and slider -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/estilos.css" />
+
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <section class="wizard-section">
+      <div class="row no-gutters">
+        <div class="row">
+          <div class="form-wizard">
+            <form action="" method="post" role="form">
+              <div class="form-wizard-header">
+                <p>Registro para solicitar prestamo</p>
+                <ul class="list-unstyled form-wizard-steps clearfix">
+                  <li class="active"><span>1</span></li>
+                  <li><span>2</span></li>
+                  <li><span>3</span></li>
+                  <li><span>4</span></li>
+                  <li><span>5</span></li>
+                </ul>
+              </div>
+              <fieldset class="wizard-fieldset">
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Información Personal
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Tu Número de Cedula*</label>
+                            <input
+                              class="contLogin wizard-required"
+                              type="text"
+                              placeholder="Tu Número de Cedula*"
+                              required
+                              autofocus
+                            />
+                            <div class="wizard-form-error"></div>
+                          </div>
+                          <div class="selector ">
+                            <label>Tipo de Documento*</label>
+                            <select type="section input">
+                              <option value="0">Cedula Ciudadania</option>
+                              <option value="0">Cedula Extranjeria</option>
+                              <option value="0">Nit</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Fecha de Expedicion*</label>
+                            <input
+                                class="contLogin wizard-required"
+                                type="date"
+                                required
+                                autofocus
+                              />
+                          </div>
+                          <div class="selector">
+                            <label>Ciudad de Expedicion*</label>
+                              <input
+                                class="contLogin wizard-required"
+                                type="text"
+                                placeholder="Bogotá"
+                                required
+                                autofocus
+                              />
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Tu Primer Nombre*</label>
+                            <input
+                              class="contLogin wizard-required"
+                              type="text"
+                              placeholder="Nombre"
+                              required
+                              autofocus
+                            />
+                          </div>
+                          <div class="selector">
+                            <label>Tu Segundo Nombre</label>
+                            <input
+                              class="contLogin"
+                              type="text"
+                              placeholder="Segundo Nombre"
+                              
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Tu Primer Apellido*</label>
+                            <div>
+                              <input
+                                class="contLogin wizard-required"
+                                type="text"
+                                placeholder="Apellido"
+                                required
+                                autofocus
+                              />
+                            </div>
+                          </div>
+                          <div class="selector">
+                            <label>Tu Segundo Apellido</label>
+                            <input
+                              class="contLogin"
+                              type="text"
+                              placeholder="Segundo Apellido"
+                              
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Fecha de Nacimiento*</label>
+                            <div>
+                              <input
+                                class="contLogin wizard-required"
+                                type="date"
+                                required
+                                autofocus
+                              />
+                            </div>
+                          </div>
+                          <div class="selector">
+                            <label>Ciudad de Nacimiento</label>
+                            <input
+                              class="contLogin"
+                              type="text"
+                              placeholder="Tu Ciudad"
+                              required
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="selector">
+                          <label>Genero</label>
+                          <div class="wizard-form-radio">
+                            <input name="radio-name" type="radio" style="margin-right: 10px;"/>
+                            <label>Masculino</label>
+                          </div>
+                          <div class="wizard-form-radio">
+                            <input name="radio-name" type="radio" style="margin-right: 10px;"/>
+                            <label>Femenino</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Información Demografica
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Nivel de escolaridad*</label>
+                            <select  type="section input" required
+                                autofocus>
+                            <option value="">Nivel de Escolaridad*...</option>
+                            <option value="1">Bachiller</option>
+                            <option value="2">Tecnico</option>
+                            <option value="3">Tecnologia</option>
+                            <option value="4">Profesional</option>
+                            <option value="4">Maestria</option>
+                          </select>
+                          </div>
+                          <div class="selector ">
+                            <label>Estado Civil*</label>
+                            <select type="section input"required
+                                autofocus>
+                              <option value="0">Soltero</option>
+                              <option value="0">Casado</option>
+                              <option value="0">Viudo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Estrato Vivienda*</label>
+                            <select type="section input" required
+                                autofocus>
+                              <option value="0">01</option>
+                              <option value="0">02</option>
+                              <option value="0">03</option>
+                              <option value="0">04</option>
+                              <option value="0">05</option>
+                              <option value="0">06</option>
+                            </select>
+                          </div>
+                          <div class="selector">
+                            <label>Tipo de Vivienda*</label>
+                              <select type="section input" required
+                                autofocus>
+                              <option value="0">Propia</option>
+                              <option value="0">Arriendo</option>
+                              <option value="0"></option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Celular*</label>
+                            <input
+                              class="contLogin wizard-required"
+                              type="tel"
+                              placeholder="3213456789"
+                              required
+                              autofocus
+                            />
+                          </div>
+                          <div class="selector">
+                            <label>Telefono</label>
+                            <input
+                              class="contLogin"
+                              type="tel"
+                              placeholder="1234563"
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Tu Correo Electronico*</label>
+                            <div>
+                              <input
+                                class="contLogin wizard-required"
+                                type="email"
+                                placeholder="mi@correo.com"
+                                required
+                                autofocus
+                              />
+                            </div>
+                          </div>
+                          <div class="selector">
+                            <label>Direccion de Residencia*</label>
+                            <input
+                              class="contLogin wizard-required"
+                              type="text"
+                              placeholder="Cll 12 # 13-13"
+                              required
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Ciudad de Residencia*</label>
+                            <div>
+                              <input
+                                class="contLogin wizard-required"
+                                type="text"
+                                placeholder="Bogotá"
+                                required
+                                autofocus
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Datos Laborales
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="custom-select">
+                          <div class="selector">
+                            <label>Ocupacion*</label>
+                              <select type="section input" required
+                                autofocus>
+                              <option value="0">Ingeniero</option>
+                              <option value="0">Diseñador</option>
+                              <option value="0">Oficios varios</option>
+                              <option value="0">Otros</option>
+                              </select>
+                          </div>
+                          <div class="selector">
+                            <label>Fecha de Ingreso*</label>
+                            <input
+                              class="contLogin wizard-required"
+                              type="date"
+                              required
+                              autofocus
+                            />
+                          </div>
+                        </div>
+                        <div class="selector">
+                          <label>Nivel de ingresos*</label>                            
+                            <select type="section input" required
+                              autofocus>
+                            <option value="0">de 500 a 1 millon</option>
+                            <option value="0">de 1 millon a 3 millones</option>
+                            <option value="0">de 3 millon a 5 millones</option>
+                            <option value="0">de 5 millon o más</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="btn-form">
+                <input class="form-wizard-next-btn pull-right btn-Solicitud" type="submit" value="Siguiente" />
+                </div> -->
+                <div class="form-group">
+                  <input href="javascript:;" class="form-wizard-next-btn pull-right" type="submit" value="Siguiente" />
+                  <!-- <a
+                    href="javascript:;"
+                    class="form-wizard-next-btn pull-right"
+                    >Siguiente</a
+                  > -->
+                </div>
+              </fieldset>
+              <fieldset class="wizard-fieldset">
+                <h5>Resumen de tu credito</h5>
+                  <div class="wrapper">
+                    <div class="simul__wizard">
+              <!-- partial:index.partial.html -->
+              <!-- Cash capture fields-->
+              <div class="marginator">
+                <div class="row">
+                  <!-- How much cash -->
+                  <div class="col-md-9 col-xs-9 title__h2"></div>
+                  <!-- Cash field -->
+                  <div
+                    class="col-md-5 col-xs-6 title_qMonto"
+                  >
+                    Que monto necesitas?
+                  </div>
+                  <div class="col-md-3 col-xs-3">
+                    <input
+                      type="text"
+                      maxlength="128"
+                      class="form-control amount"
+                      data-bind="value:currentAmount"
+                      id="currentAmountVal"
+                      style="width: 30px; background: rgb(255 255 255)"
+                    />
+                  </div>
+                </div>
+                <div class="row padme">
+                  <div class="col-xs-12"></div>
+                </div>
+                <!-- Cash slide and select -->
+                <div class="row">
+                  <!-- Reduce (-) -->
+                  <div class="col-xs-1">
+                    <a
+                      href="#"
+                      id="reduceAmount"
+                      data-bind="click: reduceAmountVal"
+                      class="btn btn-default"
+                    >
+                      <span class="glyphicon glyphicon-minus"></span>
+                    </a>
+                  </div>
+                  <!-- Cash slider -->
+  
+                  <div class="col-xs-10">
+                    <input
+                      type="range"
+                      name="amount-slider"
+                      id="amount-slider"
+                      min="50000"
+                      max="900000"
+                      data-bind="value: currentAmount, slider: currentAmount"
+                      data-highlight="true"
+                      style="border-radius: 50%"
+                    />
+                  </div>
+                  <!-- Increase (+) -->
+                  <div class="col-xs-1">
+                    <a
+                      href="#"
+                      id="increaseAmount"
+                      data-bind="click: increaseAmountVal"
+                      class="btn btn-default"
+                    >
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="row padme">
+                  <div class="col-xs-12"></div>
+                </div>
+                <!-- Period capture fields-->
+                <div class="row">
+                  <!-- How many days -->
+                  <div class="col-md-9 col-xs-9 title__h2">
+                    Cuando puedes Pagar?
+                  </div>
+                  <!-- to date label -->
+                  <div
+                    class="contDate col-md-5 col-xs-6"
+                    data-bind="html:tillDate"
+                    style="padding: 0.5em"
+                  ></div>
+                  <!-- Days field -->
+                  <div class="col-md- col-xs-3">
+                    <input
+                      type="text"
+                      maxlength="128"
+                      class="form-control period"
+                      data-bind="value:currentPeriod"
+                    />
+                  </div>
+                </div>
+                <div class="row padme">
+                  <div class="col-xs-12"></div>
+                </div>
+                <!-- Period slide and select -->
+                <div class="row">
+                  <!-- Reduce (-) -->
+                  <div class="col-xs-1">
+                    <a
+                      href="#"
+                      class="btn btn-default"
+                      id="reducePeriod"
+                      data-bind="click: reducePeriodVal"
+                    >
+                      <span class="glyphicon glyphicon-minus"></span>
+                    </a>
+                  </div>
+                  <!-- Period slider -->
+                  <div class="col-xs-10">
+                    <input
+                      type="range"
+                      name="period-slider"
+                      id="period-slider"
+                      min="1"
+                      max="35"
+                      data-bind="value: currentPeriod, slider: currentPeriod"
+                      data-highlight="true"
+                    />
+                  </div>
+                  <!-- Increase (+) -->
+                  <div class="col-xs-1">
+                    <a
+                      href="#"
+                      class="btn btn-default"
+                      id="increasePeriod"
+                      data-bind="click: increasePeriodVal"
+                    >
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="row padme">
+                  <div class="col-xs-12"></div>
+                </div>
+                <!-- Calcs and apply -->
+                <div class="row">
+                  <!-- Borrowing -->
+                  <div class="W_contentIntereses">
+                    <div class="contItem" data-bind="html:summaryBorrowed"></div>
+                    <!-- + -->
+  
+                    <!-- Interest -->
+                    <div class="contItem" data-bind="html:interestRepaid"></div>
+  
+                    <div class="contItem" data-bind="html:seguroRepaid"></div>
+  
+                    <div class="contItem" data-bind="html:estudioRepaid"></div>
+  
+                    <div class="contItem" data-bind="html:plataformaRepaid"></div>
+  
+                    <div class="contItem" data-bind="html:ivaRepaid"></div>
+                  </div>
+                  <!-- = -->
+                  <!-- <div class="col-xs-2 title__h1">=</div> -->
+                  <!-- Total to replay -->
+                  <div
+                    class="wTotalSimulador title__h2 "
+                    data-bind="html:totalRepaid"
+                    style="text-align: left; padding-top: 0.7em; font-weight: 700"
+                  ></div>
+                </button>
+                  </div>
+                </div>
+              </div>
+                  </div>
+          
+                <div class="form-group">
+                  <input href="javascript:;" class="form-wizard-previous-btn pull-left" type="submit" value="Atras" />
+                  <input href="javascript:;" class="form-wizard-next-btn pull-right" type="submit" value="Siguiente" />
+                  <!-- <a
+                    href="javascript:;"
+                    class="form-wizard-previous-btn pull-left"
+                    >Atras</a
+                  >
+                  <a
+                    href="javascript:;"
+                    class="form-wizard-next-btn pull-right"
+                    >Siguiente</a
+                  > -->
+                </div>
+              </fieldset>
+              <fieldset class="wizard-fieldset show">
+                <h5>Verificación de tú Solicitud</h5>
+                <div class="row">
+                  <div class="">
+                    <div class="custom-select">
+                      <div class="selector">
+                        <input
+                          type="text"
+                          class="contLogin wizard-required"
+                          id="bname"
+                          placeholder="Codigo Correo*"
+                          autocomplete="off"
+                          required
+                        />
+                        <div class="wizard-form-error"></div>
+                      </div>
+                      <div class="selector">
+                        <input
+                          type="text"
+                          class="contLogin wizard-required"
+                          id="brname"
+                          placeholder="Codigo Celular*"
+                          autocomplete="off"
+                          required
+                        />
+                        <div class="wizard-form-error"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input href="javascript:;" class="form-wizard-previous-btn pull-left" type="submit" value="Atras" />
+                  <input href="javascript:;" class="form-wizard-next-btn pull-right" type="submit" value="Siguiente" />
+
+                  <!-- <a
+                    href="javascript:;"
+                    class="form-wizard-previous-btn pull-left"
+                    >Atras</a
+                  >
+                  <a
+                    href="javascript:;"
+                    class="form-wizard-next-btn pull-right"
+                    >Siguiente</a
+                  > -->
+                </div>
+              </fieldset>
+              <fieldset class="wizard-fieldset">
+							  <h5>Información de Pago</h5>
+							  <div class="paycont">
+                <div class="title_h2">Escoje por cual medio quieres tu dinero</div>
+                  <div class="Paymetod">
+                    <div class="wizardPay">
+                      <div class="btnPay">
+                        <button class="wizard-daviPlata" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        </button>
+                      </div>
+                    </div>
+                    <div class="wizardPay">
+                      <div class="btnPay">
+                        <button class="wizard-corresponsal" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        </button>
+                      </div>
+                    </div>
+                    <div class="wizardPay">
+                      <div class="btnPay">
+                        <button class="wizard-pse" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <div class="custom-select">
+                      <div class="selector">
+                        <input
+                          type="text"
+                          class="contLogin wizard-required"
+                          id="bname"
+                          placeholder="Tu Nombre*"
+                          autocomplete="off"
+                          required
+                        />
+                        <div class="wizard-form-error"></div>
+                      </div>
+                      <div class="selector">
+                        <input
+                          type="text"
+                          class="contLogin wizard-required"
+                          id="brname"
+                          placeholder="Tu Numero Celular*"
+                          autocomplete="off"
+                          required
+                        />
+                        <div class="wizard-form-error"></div>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+                <div class="collapse" id="collapseExample2">
+                  <div class="card card-body">
+                    <div class="row dpay">
+                      <div class="wrapper">
+                        <div class="pay__grid">
+                          <div class="wizard-form-radio">
+                            <input name="radio-name" type="radio" style="margin-right: 15px;"/>
+                            <div class="pay__item">
+                              <img src="./static/images/multipagas.png" alt="">
+                            </div>
+                          </div>
+                          <div class="wizard-form-radio">
+                            <input name="radio-name" type="radio" style="margin-right: 15px;"/>
+                            <div class="pay__item" style="width: 50%;">
+                              <img src="./static/images/reval.png" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="collapse" id="collapseExample3">
+                  <div class="card card-body">
+                    <div class="">
+                      <div class="custom-select">
+                        <div class="selector">
+                          <input
+                            type="text"
+                            class="contLogin wizard-required "
+                            id="bname"
+                            placeholder="Tu Nombre*"
+                            autocomplete="off"
+                            required
+                          />
+                          <div class="wizard-form-error"></div>
+                        </div>
+                        <div class="selector">
+                          <input
+                            type="text"
+                            class="contLogin wizard-required"
+                            id="brname"
+                            placeholder="Tu Numero de cuenta*"
+                            autocomplete="off"
+                            required
+                          />
+                          <div class="wizard-form-error"></div>
+                        </div>
+                      </div>
+                     
+                        <div class="custom-select">
+                          <div class="selector">
+                                <label>Tipo de cuenta</label>
+                              <div class="wizard-form-radio">
+                                <input name="radio-name" type="radio" style="margin-right: 10px;" />
+                                <label>Ahorros</label>
+                              </div>
+                              <div class="wizard-form-radio">
+                                <input name="radio-name" type="radio" style="margin-right: 10px;"/>
+                                <label>Corriente</label>
+                              </div>
+                          </div>
+                          <div class="selector">
+                            <select class="section input" autocomplete="off">
+                              
+                              <option label="A continuación seleccione su banco" value="0">A continuación seleccione su banco</option>
+                              <option label="BANCAMIA S.A." value="1059">BANCAMIA S.A.</option>
+                              <option label="BANCO AGRARIO" value="1040">BANCO AGRARIO</option>
+                              <option label="BANCO AV VILLAS" value="1052">BANCO AV VILLAS</option>
+                              <option label="BANCO BBVA COLOMBIA S.A." value="1013">BANCO BBVA COLOMBIA S.A.</option>
+                              <option label="BANCO CAJA SOCIAL" value="1032">BANCO CAJA SOCIAL</option>
+                              <option label="BANCO COOPERATIVO COOPCENTRAL" value="1066">BANCO COOPERATIVO COOPCENTRAL</option>
+                              <option label="BANCO DAVIVIENDA" value="1051">BANCO DAVIVIENDA</option>
+                              <option label="BANCO DE BOGOTA" value="1001">BANCO DE BOGOTA</option>
+                              <option label="BANCO DE OCCIDENTE" value="1023">BANCO DE OCCIDENTE</option>
+                              <option label="BANCO FALABELLA " value="1062">BANCO FALABELLA </option>
+                              <option label="BANCO GNB SUDAMERIS" value="1012">BANCO GNB SUDAMERIS</option>
+                              <option label="BANCO ITAU" value="1006">BANCO ITAU</option>
+                              <option label="BANCO PICHINCHA S.A." value="1060">BANCO PICHINCHA S.A.</option>
+                              <option label="BANCO POPULAR" value="1002">BANCO POPULAR</option>
+                              <option label="BANCO PROCREDIT" value="1058">BANCO PROCREDIT</option>
+                              <option label="BANCO SANTANDER COLOMBIA" value="1065">BANCO SANTANDER COLOMBIA</option>
+                              <option label="BANCO SERFINANZA" value="1069">BANCO SERFINANZA</option>
+                              <option label="BANCOLOMBIA" value="1007">BANCOLOMBIA</option>
+                              <option label="BANCOOMEVA S.A." value="1061">BANCOOMEVA S.A.</option>
+                              <option label="CFA COOPERATIVA FINANCIERA" value="1283">CFA COOPERATIVA FINANCIERA</option>
+                              <option label="CITIBANK " value="1009">CITIBANK </option>
+                              <option label="COLTEFINANCIERA" value="1370">COLTEFINANCIERA</option>
+                              <option label="CONFIAR COOPERATIVA FINANCIERA" value="1292">CONFIAR COOPERATIVA FINANCIERA</option>
+                              <option label="COTRAFA" value="1289">COTRAFA</option><option label="DAVIPLATA" value="1551">DAVIPLATA</option>
+                              <option label="RAPPIPAY" value="1151">RAPPIPAY</option><option label="SCOTIABANK COLPATRIA" value="1019">SCOTIABANK COLPATRIA</option>
+                            </select>
+                            <div class="wizard-form-error"></div>
+                          </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <input href="javascript:;" class="form-wizard-previous-btn pull-left" type="submit" value="Atras" />
+                  <input href="javascript:;" class="form-wizard-next-btn pull-right" type="submit" value="Siguiente" />
+                  <!-- <a href="javascript:;" class="form-wizard-previous-btn pull-left">Atras</a>
+                  <a href="javascript:;" class="form-wizard-next-btn pull-right">Terminar</a> -->
+                </div>
+              </fieldset>
+              <fieldset class="wizard-fieldset">
+                <h5>Tu solicitud  ha Sido enviado</h5>
+                <div class="center-block">
+                  <div class="col-lg-4">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Datos</th>
+                          <th scope="col">informacion suministrada</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Nombre</th>
+                          <td>Mark pedraza</td>
+                          
+                        </tr>
+                        <tr>
+                          <th scope="row">Direccion</th>
+                          <td>cll 62  45 34</td>
+                          
+                        </tr>
+                        <tr>
+                          <th scope="row">Cuenta</th>
+                          <td colspan="2">34456775322</td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <!-- <a href="javascript:;" class="form-wizard-previous-btn pull-left">Atras</a> -->
+                  
+                  <input href="javascript:;" class="form-wizard-submit pull-right" type="submit" value="Salir" />
+                  <!-- <a href="javascript:;" class="form-wizard-submit pull-right">Salir</a> -->
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

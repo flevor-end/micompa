@@ -1,0 +1,41 @@
+.comoFunciona {
+  text-align: center;
+  background: var(--gray);
+  // padding: 5em 0;
+  .copy {
+    margin-bottom: 4em;
+    font-size: 1em;
+  }
+  &__item {
+    // border: 1px solid red;
+    margin: 1.5em;
+    .copy {
+      margin-bottom: 2em;
+    }
+    h1 {
+      color: var(--limeRed);
+    }
+    img {
+      margin: 1.5em;
+      width: 50%;
+    }
+    .btnSolicitud {
+      padding-top: 5%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+
+    &__grilla {
+      display: grid;
+      grid-column-gap: 1em;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &__grilla {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

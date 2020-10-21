@@ -133,8 +133,36 @@ separador {
   font-size: 23px;
   text-align: left;
 }
+.W_contentIntereses {
+  margin: auto;
+}
 
 @media screen and (min-width: 1024px) {
+  .W_contentIntereses,
+  .contentIntereses {
+    position: absolute;
+    left: -287px;
+    top: 305px;
+    border-radius: 1em;
+    padding: 1em;
+    background: var(--lightGrayishBlue);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+  }
+  .W_contentIntereses {
+    left: 32em;
+    top: 4em;
+  }
+  .wTotalSimulador.title__h2 {
+    right: -19em;
+    top: 14em;
+    position: absolute;
+    border-radius: 1em;
+    padding: 1em;
+    background: var(--lightGrayishBlue);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 30px 0px;
+    width: 335px;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -237,18 +265,23 @@ separador {
   .ui-page-theme-a .ui-slider-track .ui-btn-active {
     background-color: var(--limeRed);
   }
-
-  .contentIntereses {
-    position: absolute;
-    left: -287px;
-    top: 305px;
-    border-radius: 1em;
-    padding: 1em;
-    background: var(--lightGrayishBlue);
-    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
-  }
-  .title_qMonto {
-    font-size: 24px;
-    text-align: left;
+}
+.title_qMonto {
+  font-size: 24px;
+  text-align: left;
+}
+.contentIntereses {
+  position: absolute;
+  left: -287px;
+  top: 305px;
+  border-radius: 1em;
+  padding: 1em;
+  background: var(--lightGrayishBlue);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 1360px) {
+  .W_contentIntereses {
+    left: 36em;
+    top: 4em;
   }
 }

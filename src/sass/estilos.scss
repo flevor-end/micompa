@@ -12,6 +12,10 @@
 @import "./heroBeneficios.scss";
 @import "./containerAbout.scss";
 @import "./sectionBeneficios.scss";
+@import "./heroComoFunciona.scss";
+@import "./sectionComoFunciona.scss";
+@import "./wizard.scss";
+@import "./heroWizard.scss";
 
 :root {
   // ### Primary
@@ -47,7 +51,8 @@ body {
 }
 
 .imagenMedia,
-.imgmediaSeg2 {
+.imgmediaSeg2,
+.imagenMediacf {
   display: flex;
   justify-content: center;
   margin: 2em;
@@ -62,6 +67,11 @@ body {
 }
 .imgmediaSeg2 {
   top: -65px;
+}
+
+.imagenMediacf {
+  top: 5em;
+  margin-bottom: 6em;
 }
 
 .copy {

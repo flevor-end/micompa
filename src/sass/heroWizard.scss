@@ -1,4 +1,4 @@
-.hero {
+.simul {
   text-align: center;
   padding-bottom: 5em;
   background: url("../images/bg-intro-mobile.svg") center no-repeat;
@@ -8,17 +8,23 @@
   .copy {
     margin-bottom: 2.5em;
   }
-  &__img {
+  &__wizard {
     margin-bottom: 1.2em;
-    top: 98px;
+    top: 1em;
     background: var(--lightGrayishBlue);
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     text-align: center;
     width: 96vw;
-    left: -14px;
+    left: -64px;
     position: relative;
     padding: 1.2em;
+  }
+  .col-md-9.col-xs-9.title__h2 {
+    width: 100%;
+    position: relative;
+    left: -27px;
+    font-weight: 700;
   }
   &__imageSrc {
     display: none;
@@ -29,12 +35,6 @@
     padding: 0 3em;
   }
 
-  .col-md-9.col-xs-9.title__h2 {
-    width: 100%;
-    position: relative;
-    left: -27px;
-    font-weight: 700;
-  }
   @media screen and (min-width: 768px) {
     text-align: left;
     background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
@@ -54,17 +54,11 @@
       // border: 1px solid green;
       top: -40px;
     }
-    &__img {
-      grid-area: img;
-      min-height: 505px;
-      // background: none;
-      position: absolute;
-      width: 400px;
+    &__wizard {
+      position: relative;
+      width: 54vw;
       left: 0;
-      top: 91;
-      // height: 768px;
-      // background: url("../images/image-mockups.png") left bottom no-repeat;
-      background-size: cover;
+      margin: auto;
     }
   }
   @media screen and (min-width: 1024px) {
@@ -82,19 +76,12 @@
       z-index: 1;
       margin: 0 auto;
     }
-    &__img {
-      // background: url("../images/image-mockups.png") right -100px bottom no-repeat;
-      background: var(--lightGrayishBlue);
-      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
-      border-radius: 24px;
-      position: absolute;
-      text-align: center;
-      padding: 10px 30px;
-      // width: 700px;
-      left: 270px;
+    &__wizard {
+      left: -137px;
       right: 0;
-      top: 100px;
-      height: 345px;
+      top: 0px;
+      margin: auto;
+      width: 40%;
     }
   }
   @media screen and (min-width: 1360px) {
@@ -111,12 +98,6 @@
       top: 180px;
       z-index: 1;
       margin: 0 auto;
-    }
-    &__img {
-      // background: url("../images/image-mockups.png") right -100px bottom no-repeat;
-
-      // width: 700px;
-      left: 340px;
     }
   }
 }

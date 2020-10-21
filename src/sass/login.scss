@@ -5,6 +5,10 @@
   width: calc(50% - 32.5px);
 }
 
+.menuLog {
+  display: none;
+}
+
 .resultadoMenu {
   position: relative;
   display: inline-block;
@@ -370,6 +374,11 @@ input.contLogin.loginSize {
     height: 100%;
   }
 
+  .menuLog {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .contentResultados {
     width: calc(100% - 205.5px);
     // display: inline-block;
@@ -379,7 +388,7 @@ input.contLogin.loginSize {
     position: relative;
     display: block;
     border-width: 0;
-    transition: 0.4s;
+    // transition: 0.4s;
     overflow: hidden;
   }
   .resultadoMenu1.activo {
@@ -391,11 +400,11 @@ input.contLogin.loginSize {
     position: relative;
     display: block;
     border-width: 0;
-    transition: 0.4s;
+    // transition: 0.4s;
     overflow: hidden;
   }
   .resulReg.activo {
-    height: 106vh;
+    height: 108vh;
   }
 
   .contCampo {
@@ -528,7 +537,7 @@ input.contLogin.loginSize {
     border-radius: 5px;
     border-bottom: solid hsl(4deg 86% 40%) 0.2rem;
     color: var(--white);
-    width: 116px;
+    width: 110px;
     display: block;
     margin: auto;
   }
@@ -542,7 +551,7 @@ input.contLogin.loginSize {
     border-radius: 5px;
     border-bottom: solid hsl(192deg 83% 35%) 0.2rem;
     color: var(--white);
-    width: 116px;
+    width: 110px;
     display: block;
   }
 
