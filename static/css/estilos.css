@@ -795,7 +795,7 @@ separador {
 
 .resulOlvidoContrasena.activo {
   position: relative;
-  top: -25em;
+  top: -30em;
 }
 
 .contCampo {
@@ -1485,9 +1485,9 @@ span.iconX:after {
 
 .heroAbout {
   text-align: center;
-  padding-bottom: 5em;
+  padding-bottom: 11em;
   background: url("../images/quienesSomos.jpg") center no-repeat;
-  margin: 0 calc(-1 * var(--wrapperSpace));
+  margin: 70 calc(-1 * var(--wrapperSpace));
   background-size: cover;
 }
 .heroAbout .copy {
